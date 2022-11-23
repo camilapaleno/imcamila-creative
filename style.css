@@ -1,0 +1,628 @@
+/* Fira Sans Regular */
+@font-face {
+    font-family: "Uncut Sans";
+    src: url('fonts/Uncut/Uncut-Sans-Regular.eot');
+    src: url('fonts/Uncut/Uncut-Sans-Regular.eot') format('embedded-opentype'),
+         url('fonts/Uncut/Uncut-Sans-Regular.woff2') format('woff2'),
+         url('fonts/Uncut/Uncut-Sans-Regular.woff') format('woff'),
+         url('fonts/Uncut/Uncut-Sans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: "Uncut Sans";
+    src: url('fonts/Uncut/Uncut-Sans-Bold.eot');
+    src: url('fonts/Uncut/Uncut-Sans-Bold.eot') format('embedded-opentype'),
+            url('fonts/Uncut/Uncut-Sans-Bold.woff2') format('woff2'),
+            url('fonts/Uncut/Uncut-Sans-Bold.woff') format('woff'),
+            url('fonts/Uncut/Uncut-Sans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uncut Sans";
+    src: url('fonts/Uncut/Uncut-Sans-BoldItalic.eot');
+    src: url('fonts/Uncut/Uncut-Sans-BoldItalic.eot') format('embedded-opentype'),
+            url('fonts/Uncut/Uncut-Sans-BoldItalic.woff2') format('woff2'),
+            url('fonts/Uncut/Uncut-Sans-BoldItalic.woff') format('woff'),
+            url('fonts/Uncut/Uncut-Sans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Vegawanty";
+    src: url('fonts/Vegawanty/Vegawanty-Regular.eot');
+    src: url('fonts/Vegawanty/Vegawanty-Regular.eot') format('embedded-opentype'),
+        url('fonts/Vegawanty/Vegawanty-Regular.woff2') format('woff2'),
+        url('fonts/Vegawanty/Vegawanty-Regular.woff') format('woff'),
+        url('fonts/Vegawanty/Vegawanty-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.fade--up {
+    -webkit-transform: translateY(50px) translateZ(0);
+    transform: translateY(50px)translateZ(0);
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    opacity: 0;
+}
+
+.fade--up-delay {
+    -webkit-transform: translateY(50px) translateZ(0);
+    transform: translateY(50px)translateZ(0);
+    -webkit-transition-delay: .8s;
+    -o-transition-delay: .8s;
+    transition-delay: .8s;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
+    transition: .8s;
+    opacity: 0;
+}
+
+.fade--in {
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    opacity: 0;
+}
+
+.fade--in-delay {
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+}
+
+.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px) translateZ(0);
+    transform: translateY(0px) translateZ(0);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+}
+
+h1, h2, h3, h4, p, span, ul {
+    font-family: Uncut Sans, Arial, Helvetica, sans-serif;
+    color: #343434;
+}
+
+
+.camila {
+    background-color: #EBEAE8;
+    width: 100%;
+    
+}
+
+.camila .camila--container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.camila .nav {
+    
+}
+
+    .camila .nav--container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 30px 20px 30px;
+    }
+
+    .camila .nav--container a {
+        text-decoration: none;
+        color: #343434;
+    }
+
+        .camila .nav--container ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+        }
+
+            .camila .nav--container ul li{
+                padding: 0 20px;
+            }
+
+            .camila .nav--container ul li a{
+                text-decoration: none;
+                color: #343434;
+            }
+
+.camila #woo{
+    position: absolute;
+    text-align: center;
+    opacity: 50%;
+    z-index: 999;
+    margin-top: 30%;
+}   
+
+.camila #woo img{
+    width: 90%;
+    margin: 0 auto;
+}   
+
+
+.camila .hero {
+    overflow: hidden;
+}
+
+.camila .hero--container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    padding: 0px 30px 30px 30px;
+}
+
+    .camila .hero #hero-desktop{
+        position: absolute;
+        height: 60%;
+        bottom: 30px;
+        max-width: 1000px;
+    } 
+    
+    .camila .hero #hero-mobile{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        height: 60%;
+        max-width: 1000px;
+    } 
+
+        
+    .camila .hero #hero-blurb{
+        text-align: right;
+        width: 60%;
+        max-width: 800px;
+        position: absolute;
+        right: 60px;
+        bottom: 60px;
+        font-size: 18px;
+
+    } 
+
+
+    .camila .hero .hero-title {
+        width: 100%;
+        height: 40%;
+        padding-top: 20px;
+
+    }
+
+        .camila .hero .hero-title #hero-des{
+            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            line-height: 13vh;
+            font-size: 14vh;
+        }
+        .camila .hero .hero-title #hero-dev{
+            text-align: right;
+            font-size: 14vh;
+            line-height: 6vh;
+            font-style: italic;
+        }
+
+
+    .camila .summary--container {
+        display: flex;
+        justify-content: space-around;
+        height: 80vh;
+        align-items: center;
+    }
+
+        .camila .summary--container .box{
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+
+            .camila .summary--container img{
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-color: #343434;
+                margin-bottom: 30px;
+            }
+
+
+    .camila .code--container {
+        text-align: center;
+        height: 60vh;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        background-image: url(./img/graphic-code_desktop.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+
+    }
+
+        .camila .code--container h1 {
+            font-size: 4vw;
+            font-style: italic;
+        }
+
+        .camila .code--container p {
+            padding-top: 20px;
+            width: 60%;
+            margin: 0 auto;
+        }
+    
+        .camila .code--container #code-desktop {
+            position: absolute;
+
+        }
+            .camila .code--container #code-desktop img {
+                width: 50%;
+            }
+
+    .camila .design--container {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 20vh 0px;
+
+
+    }
+
+    .camila .design--container #gradient {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+
+        background-image: url(/img/graphic-design_gradient.png);
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -10%;
+        padding: 0px;
+    }
+
+        .camila .design--container #gradient h1 {
+            width: 60%;
+            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            font-size: 4rem;
+
+            margin-right: -10%;
+        }
+
+    .camila .design--container #cutout {
+        width: 50%;
+
+
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        padding: 50px;
+
+        background-image: url(/img/graphic-design_cutout.png);
+        background-position: top;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    .camila .about {
+
+        position: relative;
+    }
+
+    .camila .about--container {
+        width: 100%;
+        height: calc(100vh - 70px);
+        
+        padding: 20px 30px 30px 30px;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+        .camila .about img{
+            background-color: #ffffff;
+            height: 60%;
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .camila .about .about-title {
+            font-size: 1.6rem;
+            line-height: 200%;
+            position: absolute;
+            width: 50%;
+            text-align: left;
+            top: 30px;
+            align-self: flex-start;
+            max-width: 600px;
+        }
+
+        .camila .about #about-blurb {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            text-align: right;
+            width: 50%;
+            max-width: 800px;
+            align-self: flex-end;
+        }
+
+    .camila .portrait {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .camila .portrait--container {
+        width: 80%;
+        max-width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+    }
+
+        .camila .portrait--container h1 {
+            font-size: 3rem;
+            line-height: 100%;
+        }
+        .camila .portrait--container img {
+            width: 300px;            
+            height: 60%;
+            background-color: #ffffff;
+            margin-right: -5%;
+        }
+
+    .camila #about-circle {
+        position: absolute;
+        width: 40vw;
+        bottom: -40vh;
+        left: -20vh;
+        opacity: 50%;
+
+    }
+
+    .camila .letswork {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+    }
+
+        .camila .letswork h1{
+            font-size: 6rem;
+            line-height: 100%;
+            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .camila #letswork-circle {
+            position: absolute;
+            width: 50%;
+            top: 0;
+            margin: 0 auto 0 auto;
+            left: 0; 
+            right: 0; 
+            opacity: 50%;
+        }
+
+
+
+    /** CONTACT **/
+
+    .contact {
+       position: relative;
+    }
+    
+    #contact-woo {
+        position: absolute;
+
+        top: 0;
+        width: 90%;
+        margin: 0 auto 0 auto;
+        left: 0; 
+        right: 0; 
+        z-index: 1;
+
+
+    }
+
+        #contact-woo img {
+            width: 100%;
+        }
+
+    .contact--container {
+        z-index: 90;
+        background-image: url(/img/graphic-contact_woo2.png),  url(/img/graphic-contact_gradient.png);
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 30px;
+
+        height: 50vh;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        z-index: 10;
+
+    }
+
+        .contact--container h1 {
+            font-size: 5rem;
+            color: #EBEAE8;
+            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+        }
+
+        .contact--container p {
+            color: #EBEAE8;
+        }
+
+    .connect {
+        position: relative;
+
+    } 
+
+
+
+    .connect--container {
+        text-align: center;
+
+    }
+
+        .connect--container ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+            .connect--container li {
+                padding: 30px;
+            }
+
+        .resume {
+            padding: 10vh;
+            z-index: 200;
+        }
+
+        .resume--container {
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(/img/graphic-resume.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+
+
+ /** PREVIEW **/
+
+ .preview {
+    height: calc(100vh - 70px);
+ }
+
+ .preview--container {
+    text-align: center;
+    padding: 20px 30px;
+ }
+
+ .preview-site {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+ }
+
+ .preview-desktop {
+    
+
+ }
+
+ .preview-desktop-container {
+
+
+
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+ }
+
+    .preview-desktop-container img {
+        border: 1px solid #343434;
+        border-radius: 5px;
+         width: 100%;
+
+        
+    }
+
+
+ .preview-mobile {
+
+ }
+
+
+ .preview-mobile-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+ }
+
+    .preview-mobile-container img {
+        border: 1px solid #343434;
+        border-radius: 5px;
+         width: 100%;
+    }
+
+
+    #wrap {
+        position: relative;
+
+        margin: 0 auto;
+      }
+      #outer {
+        position: relative;
+        width: 900px;
+        height: 500px;
+      }
+
+
+    #wrapm {
+        position: relative;
+
+        margin: 0 auto;
+      }
+      #outerm {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        
+
+
+      }
+

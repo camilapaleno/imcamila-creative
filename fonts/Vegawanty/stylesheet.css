@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Vegawanty';
+    src: url('Vegawanty-Regular.eot');
+    src: url('Vegawanty-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Vegawanty-Regular.woff2') format('woff2'),
+        url('Vegawanty-Regular.woff') format('woff'),
+        url('Vegawanty-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
