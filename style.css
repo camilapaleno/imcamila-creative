@@ -1,4 +1,4 @@
-/* Fira Sans Regular */
+/* FONT FACE */
 @font-face {
     font-family: "Uncut Sans";
     src: url('fonts/Uncut/Uncut-Sans-Regular.eot');
@@ -42,6 +42,8 @@
     font-weight: bold;
     font-style: italic;
 }
+
+/** FADE IN **/
 
 .fade--up {
     -webkit-transform: translateY(50px) translateZ(0);
@@ -93,6 +95,8 @@
     transform: translateY(0px) translateZ(0);
 }
 
+/** GLOBAL STYLES **/
+
 
 * {
     box-sizing: border-box;
@@ -101,7 +105,7 @@
     transition: .3s;
 }
 
-h1, h2, h3, h4, p, span, ul {
+h1, h2, h3, h4, p, span, ul, a {
     font-family: Uncut Sans, Arial, Helvetica, sans-serif;
     color: #343434;
 }
@@ -114,14 +118,16 @@ h1, h2, h3, h4, p, span, ul {
 }
 
 .camila .camila--container {
-    max-width: 1600px;
-    margin: 0 auto;
     position: relative;
     
 }
 
+/** NAVBAR **/
+
 .camila .nav {
-    
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 10;
 }
 
     .camila .nav--container {
@@ -130,10 +136,10 @@ h1, h2, h3, h4, p, span, ul {
         padding: 30px 30px 20px 30px;
     }
 
-    .camila .nav--container a {
-        text-decoration: none;
-        color: #343434;
-    }
+        .camila .nav--container a {
+            text-decoration: none;
+            color: #343434;
+        }
 
         .camila .nav--container ul{
             display: flex;
@@ -143,7 +149,7 @@ h1, h2, h3, h4, p, span, ul {
         }
 
             .camila .nav--container ul li{
-                padding: 0 20px;
+                padding: 0 0 0 40px;
             }
 
             .camila .nav--container ul li a{
@@ -151,22 +157,67 @@ h1, h2, h3, h4, p, span, ul {
                 color: #343434;
             }
 
+        .camila #nav-home .nav--container a {
+            color: #EBEAE8;
+        }
+
+        .camila #nav-home .nav--container span {
+            color: #EBEAE8;
+        }
+
+            .camila #nav-home .nav--container ul li a{
+                text-decoration: none;
+                color: #EBEAE8;
+            }
+
+            @media (max-width: 640px) {
+                .camila .nav--container {
+                    padding: 20px;
+                }
+                .camila .nav--container ul{
+                    flex-direction: column;
+                    text-align: right;
+                }
+                .camila .nav--container ul li{
+                    padding: 0 0;
+                }
+            }
+
+/************************************************
+
+                    HOME 
+                    
+************************************************/
+
 .camila #woo{
     position: absolute;
     text-align: center;
-    opacity: 50%;
-    z-index: 999;
-    margin-top: 30%;
+    z-index: 0;
+    margin-top: -20%;
 }   
 
-.camila #woo img{
-    width: 90%;
-    margin: 0 auto;
-}   
+    .camila #woo img{
+        width: 90%;
+        margin: 0 auto;
+    }   
 
+        @media (max-width: 640px) {
+            .camila #woo{
+                margin-top: 20%;
+            }   
+        }
+
+.hero--wrapper {
+    background-image: url(./img/background_hero1.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .camila .hero {
     overflow: hidden;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .camila .hero--container {
@@ -190,7 +241,6 @@ h1, h2, h3, h4, p, span, ul {
         height: 60%;
         max-width: 1000px;
     } 
-
         
     .camila .hero #hero-blurb{
         text-align: right;
@@ -200,15 +250,13 @@ h1, h2, h3, h4, p, span, ul {
         right: 60px;
         bottom: 60px;
         font-size: 18px;
-
-    } 
-
+        color: #EBEAE8;
+    }
 
     .camila .hero .hero-title {
         width: 100%;
         height: 40%;
         padding-top: 20px;
-
     }
 
         .camila .hero .hero-title #hero-des{
@@ -216,64 +264,179 @@ h1, h2, h3, h4, p, span, ul {
             text-transform: uppercase;
             line-height: 13vh;
             font-size: 14vh;
+            color:#EBEAE8;
         }
+
         .camila .hero .hero-title #hero-dev{
             text-align: right;
             font-size: 14vh;
             line-height: 6vh;
             font-style: italic;
+            color:#EBEAE8;
         }
 
+        @media (max-aspect-ratio: 8/7) {
+            .camila .hero--container {
+                height: calc(100vh - 100px);
+            }
+            .camila .hero #hero-desktop{
+                display: none;
+            } 
+            .camila .hero .hero-title #hero-des{
+                line-height: 100%;
+                font-size: 10vw;
+            }
+            .camila .hero .hero-title #hero-dev{
+                line-height: 100%;
+                font-size: 10vw;
+            }
+            .camila .hero #hero-desktop{
+                height: unset;
+                width: 100%;
+            } 
+            .camila .hero #hero-blurb{
+                width: 80%;
+                font-size: 14px;
+            }
+        }
+
+    .camila .summary {
+        background-color: #EBEAE8;
+    }
 
     .camila .summary--container {
         display: flex;
         justify-content: space-around;
-        height: 80vh;
         align-items: center;
+        max-width: 1600px;
+        margin: 10% auto 5% auto;
     }
 
         .camila .summary--container .box{
             display: flex;
             flex-direction: column;
             width: 20%;
+            margin-top: -50px;
         }
 
-            .camila .summary--container img{
-                width: 50px;
-                height: 50px;
+            .camila .summary--container .box img{
+                width: 100px;
+                height: 100px;
                 margin: 0 auto;
                 border-radius: 50%;
-                background-color: #343434;
+
                 margin-bottom: 30px;
+                animation: rotate 12s infinite linear;
+            }
+
+            .camila .summary--container .box:nth-child(2) img{
+                animation: rotate__slow 8s infinite linear;
+            }
+
+            @keyframes rotate {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(359deg);
+                }
+              }
+
+            @keyframes rotate__slow {
+            from {
+                transform: rotate(359deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+            }
+
+            @media (max-width: 640px) {
+                .camila .summary--container {
+                    flex-direction: column;
+                    padding: 50px 30px 30px 30px;
+                }
+                .camila .summary--container .box{
+                    width: 100%;
+                    margin-bottom: 40px;
+                    margin-top: 0px;
+                }
+                .camila .summary--container .box p{
+                    font-size: 14px;
+                    text-align: center;
+                }
             }
 
 
     .camila .code--container {
-        text-align: center;
-        height: 60vh;
-        margin: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-
         background-image: url(./img/graphic-code_desktop.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        
-
     }
 
-        .camila .code--container h1 {
-            font-size: 4vw;
-            font-style: italic;
+    .m-scroll {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin: auto;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .m-scroll__title {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        transition: all 1s ease;
+      }
+
+      .m-scroll__title > div {
+        display: flex;
+        -webkit-animation: scrollText 30s infinite linear;
+                animation: scrollText 30s infinite linear;
+      }
+
+      .m-scroll__title h1 {
+        margin: 0;
+        font-size: 80px;
+        color: #343434;
+        text-transform: uppercase;
+      }
+
+      /*div:hover {
+        animation-play-state: paused;
+      }*/
+      @-webkit-keyframes scrollText {
+        from {
+          transform: translateX(0%);
         }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes scrollText {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
         .camila .code--container p {
             padding-top: 20px;
-            width: 60%;
-            margin: 0 auto;
+            padding-bottom: 100px;
+            width: 40%;
+            margin: -100px auto 0px auto;
+            text-align: center;
         }
     
         .camila .code--container #code-desktop {
@@ -284,60 +447,177 @@ h1, h2, h3, h4, p, span, ul {
                 width: 50%;
             }
 
-    .camila .design--container {
-        height: 100vh;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 20vh 0px;
+            @-webkit-keyframes scrollText {
+                from {
+                  transform: translateX(0%);
+                }
+                to {
+                  transform: translateX(-50%);
+                }
+              }
+              @keyframes scrollText {
+                from {
+                  transform: translateX(0%);
+                }
+                to {
+                  transform: translateX(-50%);
+                }
+              }
 
+              @media (max-width: 640px) {
+                .m-scroll__title h1 {
+                    font-size: 1.2rem;
+                  }
+
+                .camila .code--container {
+                    background-image: none;
+                }
+
+                .m-scroll__title {
+                    align-items: flex-start;
+                  }
+
+                .m-scroll {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    margin: auto;
+                    overflow: hidden;
+                    z-index: 1;
+                  }
+
+                .camila .code--container p {
+                    padding: 0px 20px 50px 20px;
+                    width: 100%;
+                    margin: -150px auto 0px auto;
+                    text-align: center;
+                }
+
+
+              }
+
+    .camila--design {
 
     }
 
-    .camila .design--container #gradient {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        
-
-        background-image: url(/img/graphic-design_gradient.png);
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-left: -10%;
-        padding: 0px;
-    }
-
-        .camila .design--container #gradient h1 {
-            width: 60%;
-            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
-            text-transform: uppercase;
-            font-size: 4rem;
-
-            margin-right: -10%;
+        .camila .design--container {
+            height: 80vh;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 5% 0px;    
+            max-width: 1600px;
+            margin: 0 auto;
         }
 
-    .camila .design--container #cutout {
-        width: 50%;
+        .camila .design--container #gradient {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            
+
+            background-image: url(/img/graphic-design_gradient.png);
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: -10%;
+            padding: 0px;
+        }
+
+            .camila .design--container #gradient h1 {
+                width: 60%;
+                font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+                text-transform: uppercase;
+                font-size: 4rem;
+
+                margin-right: -10%;
+            }
+
+            .camila .design--container #cutout {
+                width: 50%;
 
 
-        display: flex;
-        height: 100%;
-        align-items: flex-end;
-        padding: 50px;
+                display: flex;
+                height: 100%;
+                align-items: flex-end;
+                padding: 50px;
 
-        background-image: url(/img/graphic-design_cutout.png);
-        background-position: top;
-        background-size: 80%;
-        background-repeat: no-repeat;
-    }
+                background-image: url(/img/graphic-design_cutout.png);
+                background-position: top;
+                background-size: 80%;
+                background-repeat: no-repeat;
+            }
+
+            @media (max-width: 640px) {
+                .camila .design--container {
+                    height: unset;
+                    flex-direction: column;
+                    padding: 30px;    
+                }
+                    .camila .design--container #gradient {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        margin-left: -40%;
+                    }
+
+                    .camila .design--container #gradient h1 {
+                        width: 80%;
+                        margin-right: -40%;
+                        font-size: 3rem;
+                    }
 
 
+                    .camila .design--container #cutout {
+                        width: 100%;
+
+
+                        display: flex;
+                        height: 100%;
+                        align-items: flex-end;
+                        padding: 30px 0px;
+
+                        background-image: none;
+                    }
+            }
+
+        .camila .reachout {
+            text-align: center;
+            padding: 50px 0px 100px 0px;
+        }
+
+            .camila .reachout h1 span{
+                font-size: 6rem;
+                -webkit-text-stroke: 1px #343434;
+                color: transparent;
+                cursor: pointer;
+            }
+
+            .camila .reachout h1 span:hover{
+                color: #343434;
+            }
+
+            @media (max-width: 640px) {
+                .camila .reachout h1 span{
+                    font-size: 3rem;
+                    cursor: pointer;
+                }
+            }
+
+/************************************************
+
+                    ABOUT 
+                    
+************************************************/
 
 
     .camila .about {
-
+        max-width: 1600px;
+        margin: 0 auto;
         position: relative;
     }
 
@@ -355,14 +635,17 @@ h1, h2, h3, h4, p, span, ul {
 
         .camila .about img{
             background-color: #ffffff;
-            height: 60%;
-            width: 80%;
-            max-width: 1000px;
+
+            width: 1200px;
+            height: 600px;
+            object-fit: cover;
             margin: 0 auto;
+            border-radius: 50rem 50rem 0 0;
+            overflow: hidden;
         }
 
         .camila .about .about-title {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             line-height: 200%;
             position: absolute;
             width: 50%;
@@ -378,14 +661,75 @@ h1, h2, h3, h4, p, span, ul {
             bottom: 30px;
             text-align: right;
             width: 50%;
-            max-width: 800px;
+            max-width: 500px;
             align-self: flex-end;
         }
 
+        @media (max-width: 1280px) {
+
+            .camila .about--container {
+                width: 100%;
+                height: 100vh;
+            }
+            .camila .about img{
+                background-color: #ffffff;
+    
+                width: 100%;
+                max-width: 800px;
+                height: 600px;
+                object-fit: cover;
+                margin: 0 auto;
+                border-radius: 50rem 50rem 0 0;
+                overflow: hidden;
+            }
+            .camila .about .about-title {
+                font-size: 1.2rem;
+                line-height: 200%;
+                position: relative;
+                width: 80%;
+                text-align: left;
+                top: 0px;
+                align-self: flex-start;
+                max-width: 600px;
+                margin-bottom: -50px;
+            }
+            .camila .about #about-blurb {
+                position: relative;
+                right: 0;
+                bottom: unset;
+                text-align: right;
+                width: 100%;
+                max-width: unset;
+                align-self: unset;
+
+            }
+            .camila .about--container {
+                height: calc(100vh - 70px);
+                flex-direction: column;
+            }
+
+   
+        }
+
+        @media (max-width: 640px) {
+            .camila .about--container {
+                width: 100%;
+                height: 120vh;
+            }
+            .camila .about .about-title {
+                position: relative;
+                width: 90%;
+            }
+            .camila .about .about-title {
+                font-size: 1rem;
+            }
+        }
+
     .camila .portrait {
-        height: 80vh;
         display: flex;
         align-items: center;
+        max-width: 1600px;
+        margin: 0 auto;
     }
 
     .camila .portrait--container {
@@ -403,18 +747,32 @@ h1, h2, h3, h4, p, span, ul {
             line-height: 100%;
         }
         .camila .portrait--container img {
-            width: 300px;            
-            height: 60%;
-            background-color: #ffffff;
-            margin-right: -5%;
+            width: 400px;            
+            margin-right: 5%;
         }
 
-    .camila #about-circle {
-        position: absolute;
-        width: 40vw;
-        bottom: -40vh;
-        left: -20vh;
-        opacity: 50%;
+        @media (max-width: 840px) {
+            .camila .portrait--container {
+                width: 100%;
+                padding: 20px;
+                flex-direction: column;
+            }
+            .camila .portrait--container img {
+                width: 50%;            
+                margin-right: 20px;
+                align-self: flex-end;
+            }
+            .camila .portrait--container p {
+                width: 80%;
+                align-self: flex-start;
+                padding-top: 20px;
+            }
+
+        }
+
+    .camila #about-text {
+        width: 100%;
+        opacity: 90%;
 
     }
 
@@ -425,7 +783,8 @@ h1, h2, h3, h4, p, span, ul {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 40vh;
+        margin-top: 50px;
+        padding: 100px 0 50px 0;
         overflow: hidden;
     }
 
@@ -445,13 +804,32 @@ h1, h2, h3, h4, p, span, ul {
             opacity: 50%;
         }
 
+        @media (max-width: 840px) {
+            .camila .letswork {
+                width: 100%;
+                margin-top: 20px;
+                padding: 20px 0 20px 0;
+                overflow: hidden;
+            }
+            .camila .letswork h1{
+                font-size: 3rem;
+                width: 90%;
+            }
+        }
 
 
-    /** CONTACT **/
 
-    .contact {
-       position: relative;
-    }
+/************************************************
+
+                    CONTACT 
+                    
+************************************************/
+
+.contact {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
     
     #contact-woo {
         position: absolute;
@@ -472,7 +850,7 @@ h1, h2, h3, h4, p, span, ul {
 
     .contact--container {
         z-index: 90;
-        background-image: url(/img/graphic-contact_woo2.png),  url(/img/graphic-contact_gradient.png);
+        background-image: url(/img/background_hero1.jpg);
         
         background-repeat: no-repeat;
         background-size: cover;
@@ -523,6 +901,15 @@ h1, h2, h3, h4, p, span, ul {
                 padding: 30px;
             }
 
+            @media (max-width: 640px) {
+                .contact--container h1 {
+                    font-size: 3rem;
+                }
+                .connect--container li {
+                    padding: 5%;
+                }
+            }
+
         .resume {
             padding: 10vh;
             z-index: 200;
@@ -540,18 +927,223 @@ h1, h2, h3, h4, p, span, ul {
 
         }
 
+/************************************************
+
+                 PORTFOLIO 
+                    
+************************************************/
+
+ .portfolio {
+
+ }
+
+    .portfolio--container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .portfolio--container h1 {
+        text-align: right;
+        font-size: 8rem;
+        font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+        padding-top: 30px;
+        padding-right: 30px;
+        line-height: 80%;
+    }
+
+    .portfolio--container p {
+        text-align: right;
+        padding-right: 30px;
+    }
+
+        .portfolio--container .portfolio--card {
+            display: flex;
+            padding: 30px 30px;
+
+        }
+
+        .portfolio--container .portfolio--card .cardimg {
+            position: relative;
+            border: 1px solid #b0b0b0;
+            border-radius: 5px;
+        }
+
+            .portfolio--container .portfolio--card .cardimg .tabs {
+                position: absolute;
+                display: flex;
+                top: 5px;
+                left: 5px;
+            }
+
+            .portfolio--container .portfolio--card .cardimg .tabs .x{
+
+                height: 10px;
+                width: 10px;
+            }
+
+                .portfolio--container .portfolio--card .cardimg .tabs:after {
+                    content: '';
+                    height: 10px;
+                    border-left: 1px solid #b0b0b0;
+                    position: absolute;
+                    transform: rotate(45deg);
+                    left: 5px;
+                }
+                
+                .portfolio--container .portfolio--card .cardimg .tabs:before {
+                    content: '';
+                    height: 10px;
+                    border-left: 1px solid #b0b0b0;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    left: 5px;
+                }
+
+            .portfolio--container .portfolio--card .cardimg .tabs .circle{
+                border: 1px solid #b0b0b0;
+                height: 10px;
+                width: 10px;
+                margin-left: 5px;
+                border-radius: 50%;
+            }
+
+            
+
+        .portfolio--container .portfolio--card .cardimg .cardbkg{
+            width: 500px;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+            overflow: hidden;
+            margin-top: 20px;
+            border-top: 1px solid #b0b0b0;
+            border-radius: 0px 0px 5px 5px;
+            vertical-align: bottom;
+        }
+
+        .portfolio--container .portfolio--card .cardtext {
+            padding-left: 20px;
+        }
+
+            .portfolio--container .portfolio--card .cardtext p{
+                max-width: 500px;
+                text-align: left;
+            }
+
+            .portfolio--container .portfolio--card .cardtext a{
+                max-width: 500px;
+                text-align: left;
+            }
+
+            .long-arrow-right{
+                display: inline-block;
+                margin-left: 10px;
+                width: 10px;
+                height: 10px;
+                border-top: 1px solid #000;
+                border-left: 1px solid #000;
+                transform: rotate(135deg);
+            }
+
+            .long-arrow-right::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 14px;
+                background-color: black;
+                transform: rotate(-45deg) translate(4.5px, 1px);
+                left: 0;
+                top: 0;
+            }
+
+
+            .back-arrow{
+                display: absolute;
+                left: 0;
+                margin-left: 10px;
+                width: 10px;
+                height: 10px;
+                border-top: 1px solid #000;
+                border-left: 1px solid #000;
+                transform: rotate(315deg);
+            }
+
+            .back-arrow::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 14px;
+                background-color: black;
+                transform: rotate(-45deg) translate(4.5px, 1px);
+                left: 0;
+                top: 0;
+            }
+
+
+            @media (max-width: 840px) {
+                .portfolio--container h1 {
+                    padding-RIGHT: 20px;
+                    font-size: 3rem;
+                }
+                .portfolio--container p {
+                    padding: 0px 20px;
+                }
+                .portfolio--container .portfolio--card {
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 30px 0px;
+        
+                }     
+                .portfolio--container .portfolio--card .cardimg {
+                    margin: 20px;
+                }
+                .portfolio--container .portfolio--card .cardimg .cardbkg{
+                    width: 100%;
+                    height: 350px;
+                }
+
+                .portfolio--container .portfolio--card .cardtext {
+                    padding: 0px 20px 20px 20px;
+                }
+
+                .portfolio--container .portfolio--card .cardtext p{
+                    padding: 0;
+                }
+
+                   
+            }
+
+            @media (max-width: 540px) {
+                .portfolio--container .portfolio--card .cardimg .cardbkg{
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+
 
 
  /** PREVIEW **/
 
  .preview {
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
  }
 
  .preview--container {
     text-align: center;
     padding: 20px 30px;
  }
+
+ .preview--container h3{
+    text-transform: uppercase;
+ }
+
+
+ .preview--container {
+   line-clamp: 2;
+   text-overflow: ellipsis;
+   overflow: hidden;
+ }
+
 
  .preview-site {
     display: flex;
@@ -560,69 +1152,82 @@ h1, h2, h3, h4, p, span, ul {
  }
 
  .preview-desktop {
-    
+    position: relative;
+
+    margin: 0 auto;
 
  }
 
- .preview-desktop-container {
-
-
-
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
- }
-
-    .preview-desktop-container img {
-        border: 1px solid #343434;
-        border-radius: 5px;
-         width: 100%;
-
-        
-    }
-
-
- .preview-mobile {
-
- }
-
-
- .preview-mobile-container {
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
- }
-
-    .preview-mobile-container img {
-        border: 1px solid #343434;
-        border-radius: 5px;
-         width: 100%;
-    }
-
-
-    #wrap {
-        position: relative;
-
-        margin: 0 auto;
-      }
-      #outer {
+    .preview-desktop-container {
+        overflow: auto;
         position: relative;
         width: 900px;
         height: 500px;
-      }
+        transform: translateZ(0);
+
+        box-shadow: 0 0 100px rgba(23, 18, 18, 0.07);
+    }
+
+        .preview-desktop-container #inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .preview-desktop-container #inner img{
+            width: 100%;
+        }
+
+        .full-height {
+            position: fixed;
+            left: 0%;
+            right: 0;
+            top: 0;
+            bottom: 0px;
+            transform: translateX(0%);
+            pointer-events: none;
+          }
+
+          .full-height img {
+            width: 100%;
+          }
+
+          @media (max-width: 640px) {
+            .preview {
+                min-height: calc(100vh - 100px);
+                position: relative;
+             }
+             
+             .preview  .seemore {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+                right: 30px;
+
+             }
+          }
 
 
-    #wrapm {
-        position: relative;
 
-        margin: 0 auto;
-      }
-      #outerm {
-        position: relative;
-        width: 200px;
-        height: 300px;
-        
+.footer {
+    max-width: 1600px;
+    margin: 0 auto;
 
 
-      }
+}
 
+.footer-container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+@media (max-width: 840px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}

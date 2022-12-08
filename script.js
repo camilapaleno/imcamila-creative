@@ -31,4 +31,5 @@ function resize(){let scale,
     outer.style.transform = isMax?'':'scale(' + scale + ')';
     wrapper.style.width = isMax?'':maxWidth * scale;
     wrapper.style.height = isMax?'':maxHeight * scale;
+    outer.style.marginTop= isMax?'':'-' + (maxHeight - (maxHeight * scale))/2 + 'px';
 }
