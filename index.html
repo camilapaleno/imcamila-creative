@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="scripts.js"></script>
     
+    
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -25,7 +26,7 @@
     <meta property="og:description" content="#">
 
     
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
@@ -48,15 +49,47 @@
                 <div class="hero">
                     <div class="hero--container">
                         
-                        <div class="hero-title fade--up">
-                            <h1 id="hero-des">creative design</h1>
-                            <h1 id="hero-dev">& development</h1>                        
+                        <div class="hero-title">
+
+                            <div class="scroll">
+                                <div class="m-scroll">
+                                    <span>CREATIVE DESIGN CREATIVE DESIGN </span>
+                                    <span>CREATIVE DESIGN CREATIVE DESIGN </span>
+
+                                </div>
+                              </div>
+                              <div class="scroll">
+                                <div class="m-scroll">
+                                    <span>DEVELOPMENT DEVELOPMENT </span>
+                                    <span>DEVELOPMENT DEVELOPMENT </span>
+
+                                </div>
+                              </div>
+
+
+                    
+                        </div>
+                       
+                        <div class="band">
+                            Hello 
                         </div>
 
-
                         <div>
-                            <img id="hero-desktop" class="fade--up-delay" src="/img/graphic-home_desktop.png">
-                            <img id="hero-mobile" class="fade--up-delay" src="/img/graphic-home_mobile.png">
+                            <div id="hero-desktop" class="fade--up-delay">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                            <div id="hero-mobile" class="fade--up-delay">
+                                <div class="lines">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+
+                            </div>
                             <p id="hero-blurb" class="fade--up-delay">My name is Camila. I'm a web designer and developer based in Los Angeles, CA.
                                 <br><br>
                                 I specialize in creating and fine-tuning business' online presence through content 
@@ -68,6 +101,7 @@
 
                     </div>
                 </div>
+
 
                 <div class="summary">
                     <div class="summary--container">
@@ -109,52 +143,55 @@
             </div>
 
 
+
+
             <div class="code">
                 <div class="code--container">
-                    <div class="m-scroll">
-                        <div class="m-scroll__title">
-                          <div>
-                            <h1>
-                              clean, contemprary, and efficient code. clean, contemprary, and efficient code. 
-                            </h1>
-                            <h1>
-                                clean, contemprary, and efficient code. clean, contemprary, and efficient code.
-                            </h1>
-                          </div>
-                        </div>
-                      </div>
-                    <p class="fade--up-delay" >Web development has come a long way. It's crucial to keep up with the current best practices and trends in development.</p>
+                    <div class="text">
+                        <h1>
+                            clean, contemprary, and efficient code.
+                        </h1>
+                        <h4 class="fade--up-delay">Web development has come a long way. It's crucial to keep up with the current best practices and trends in development.</h4>
+                        <p class="fade--up-delay">Check out my portfolio</p>
+                    </div>
+
                 </div>
             </div>
 
 
             <div class="design">
                 <div class="design--container">
-                    <div id="gradient" >
-                        <h1 class="fade--up-delay">Using design to tell a story.</h1>
+                    <div class="text">
+                        <h1 class="fade--up-delay">Using design to <br>tell a story.</h1>
+                        <h4 class="fade--up">With most people living a huge part of their lives online, it's becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.</h4>
+                        <p class="fade--up-delay">Check out my portfolio</p>                        
                     </div>
-                    <div id="cutout" >
-                        <p class="fade--up">With most people living a huge part of their lives online, it's becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.</p>
+                    <div class="lottie">
+                        
+                        <lottie-player src="./img/design.json"  background="transparent"  speed="1"  autoplay loop></lottie-player>
+                        
                     </div>
-                    
                 </div>
             </div>
 
 
-            <div class="reachout">
-                <h1><span>l</span><span>e</span><span>t</span><span>'</span><span>s</span> <span>w</span><span>o</span><span>r</span><span>k</span> <span>t</span><span>o</span><span>g</span><span>e</span><span>t</span><span>h</span><span>e</span><span>r</span></h1>
-                <p>feel free to reach out to me.</p>
-                <a href="#">contact</a><div class="long-arrow-right"></div>
-            </div>
-
-            <div class="footer">
-                <hr>
-                <div class="footer-container">
-                    <span><b>CAMI<i>LA</i></b></span>
-                    <p>FONTS: <a href="#">Vegawanty</a> <a href="#">Uncut Sans</a>
-                    </p>
+            <div class="footer--wrap">
+                <div class="reachout">
+                    <h1><span>l</span><span>e</span><span>t</span><span>'</span><span>s</span> <span>w</span><span>o</span><span>r</span><span>k</span> <span>t</span><span>o</span><span>g</span><span>e</span><span>t</span><span>h</span><span>e</span><span>r</span></h1>
+                    <p>feel free to reach out to me.</p>
+                    <a href="#">contact</a><div class="long-arrow-right"></div>
+                </div>
+    
+                <div class="footer">
+                    <hr>
+                    <div class="footer-container">
+                        <span><b>CAMI<i>LA</i></b></span>
+                        <p>FONTS: <a href="#">Vegawanty</a> <a href="#">Uncut Sans</a>
+                        </p>
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </div>

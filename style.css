@@ -194,6 +194,8 @@ h1, h2, h3, h4, p, span, ul, a {
     text-align: center;
     z-index: 0;
     margin-top: -20%;
+
+    display: none;
 }   
 
     .camila #woo img{
@@ -209,7 +211,7 @@ h1, h2, h3, h4, p, span, ul, a {
 
 .hero--wrapper {
     background-image: url(./img/background_hero1.jpg);
-    background-position: top center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -224,23 +226,92 @@ h1, h2, h3, h4, p, span, ul, a {
     width: 100%;
     height: calc(100vh - 70px);
     position: relative;
-    padding: 0px 30px 30px 30px;
 }
 
     .camila .hero #hero-desktop{
         position: absolute;
         height: 60%;
         bottom: 30px;
-        max-width: 1000px;
+        width: 60%;
+        max-width: 1200px;
+        border: 1px #EBEAE8 solid;
+        border-radius: 5px;
+
+        display: none;
     } 
+
+    .camila .hero #hero-desktop .tabs {
+        position: absolute;
+        display: flex;
+        top: 10px;
+        left: 10px;
+    }
+
+    .camila .hero #hero-desktop .tabs .x{
+        height: 16px;
+        width: 16px;
+    }
+
+        .camila .hero #hero-desktop .tabs:after {
+            content: '';
+            height: 16px;
+            border-left: 3px solid #EBEAE8;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 10px;
+        }
+        
+        .camila .hero #hero-desktop .tabs:before {
+            content: '';
+            height: 16px;
+            border-left: 3px solid #EBEAE8;
+            position: absolute;
+            transform: rotate(-45deg);
+            left: 10px;
+        }
+
+    .camila .hero #hero-desktop .tabs .circle{
+        background-color: #EBEAE8;
+        height: 15px;
+        width: 15px;
+        margin-left: 10px;
+        border-radius: 50%;
+    }
+
+
+
     
     .camila .hero #hero-mobile{
         position: absolute;
         right: 30px;
         bottom: 30px;
         height: 60%;
-        max-width: 1000px;
+        width: 20%;
+        max-width: 400px;
+        border: 1px #EBEAE8 solid;
+        border-radius: 5px;
+
+        display: none;
     } 
+
+        .camila .hero #hero-mobile .lines{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 15px;
+            right: 15px;
+        } 
+
+        .camila .hero #hero-mobile .line {
+            width: 25px;
+            height: 3px;
+            background-color: #EBEAE8;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+
+
+
         
     .camila .hero #hero-blurb{
         text-align: right;
@@ -259,7 +330,48 @@ h1, h2, h3, h4, p, span, ul, a {
         padding-top: 20px;
     }
 
-        .camila .hero .hero-title #hero-des{
+
+    .scroll {
+        position: relative;
+        width: 100vw;
+        height: 15%;
+        min-height: 150px;
+        overflow: hidden;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .m-scroll {
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        animation: scrollText 30s infinite linear;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+      }
+      
+      .m-scroll span {
+        font-size: 150px;
+        display: inline-block;
+        min-width: 100vw;
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      
+      @keyframes scrollText {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+
+/*         .camila .hero .hero-title #hero-des{
             font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
             text-transform: uppercase;
             line-height: 13vh;
@@ -273,7 +385,7 @@ h1, h2, h3, h4, p, span, ul, a {
             line-height: 6vh;
             font-style: italic;
             color:#EBEAE8;
-        }
+        } */
 
         @media (max-aspect-ratio: 8/7) {
             .camila .hero--container {
@@ -300,24 +412,40 @@ h1, h2, h3, h4, p, span, ul, a {
             }
         }
 
-    .camila .summary {
+    .camila .band {
+        height: 50px;
         background-color: #EBEAE8;
+        width: 100%;
+    }
+
+
+
+    .camila .summary {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 30px 30px 60px 30px;
     }
 
     .camila .summary--container {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
-        max-width: 1600px;
-        margin: 10% auto 5% auto;
+
+
+        padding: 30px 30px 30px 30px;
     }
 
         .camila .summary--container .box{
             display: flex;
             flex-direction: column;
             width: 20%;
-            margin-top: -50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
+
+            .camila .summary--container .box p {
+                color: #EBEAE8;
+            }
 
             .camila .summary--container .box img{
                 width: 100px;
@@ -327,6 +455,7 @@ h1, h2, h3, h4, p, span, ul, a {
 
                 margin-bottom: 30px;
                 animation: rotate 12s infinite linear;
+                filter: invert();
             }
 
             .camila .summary--container .box:nth-child(2) img{
@@ -368,222 +497,112 @@ h1, h2, h3, h4, p, span, ul, a {
             }
 
 
-    .camila .code--container {
-        background-image: url(./img/graphic-code_desktop.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .m-scroll {
-        display: flex;
+    .camila .code {
+        background-color: #343434;
+        height: 100vh;
+        
         position: relative;
-        width: 100%;
-        height: 300px;
-        margin: auto;
-        overflow: hidden;
-        z-index: 1;
-      }
+    }
 
-      .m-scroll__title {
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
+    .camila .code--container {
+        
         height: 100%;
-        white-space: nowrap;
-        transition: all 1s ease;
-      }
+        padding: 50px 30px;
+        position: relative;
 
-      .m-scroll__title > div {
-        display: flex;
-        -webkit-animation: scrollText 30s infinite linear;
-                animation: scrollText 30s infinite linear;
-      }
-
-      .m-scroll__title h1 {
-        margin: 0;
-        font-size: 80px;
-        color: #343434;
-        text-transform: uppercase;
-      }
-
-      /*div:hover {
-        animation-play-state: paused;
-      }*/
-      @-webkit-keyframes scrollText {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-      @keyframes scrollText {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-
-        .camila .code--container p {
-            padding-top: 20px;
-            padding-bottom: 100px;
-            width: 40%;
-            margin: -100px auto 0px auto;
-            text-align: center;
-        }
-    
-        .camila .code--container #code-desktop {
-            position: absolute;
-
-        }
-            .camila .code--container #code-desktop img {
-                width: 50%;
-            }
-
-            @-webkit-keyframes scrollText {
-                from {
-                  transform: translateX(0%);
-                }
-                to {
-                  transform: translateX(-50%);
-                }
-              }
-              @keyframes scrollText {
-                from {
-                  transform: translateX(0%);
-                }
-                to {
-                  transform: translateX(-50%);
-                }
-              }
-
-              @media (max-width: 640px) {
-                .m-scroll__title h1 {
-                    font-size: 1.2rem;
-                  }
-
-                .camila .code--container {
-                    background-image: none;
-                }
-
-                .m-scroll__title {
-                    align-items: flex-start;
-                  }
-
-                .m-scroll {
-                    display: flex;
-                    position: relative;
-                    width: 100%;
-                    height: 200px;
-                    margin: auto;
-                    overflow: hidden;
-                    z-index: 1;
-                  }
-
-                .camila .code--container p {
-                    padding: 0px 20px 50px 20px;
-                    width: 100%;
-                    margin: -150px auto 0px auto;
-                    text-align: center;
-                }
-
-
-              }
-
-    .camila--design {
+        max-width: 1600px;
+        margin: 0 auto;
 
     }
 
-        .camila .design--container {
-            height: 80vh;
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            padding: 5% 0px;    
-            max-width: 1600px;
-            margin: 0 auto;
+    .camila .code .text{
+
+        border-radius: 5px;
+        padding: 30px;
+        height: 100%;
+    }
+
+        .camila .code h1{
+            color: #EBEAE8;
+            text-transform: uppercase;
+            font-size: 84px;
+            max-width: 70%;
+            padding-bottom: 20px;
         }
 
-        .camila .design--container #gradient {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            
-
-            background-image: url(/img/graphic-design_gradient.png);
-            background-position: left;
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-left: -10%;
-            padding: 0px;
+        .camila .code h4{
+            color: #EBEAE8;
+            max-width: 40%;
         }
 
-            .camila .design--container #gradient h1 {
-                width: 60%;
-                font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
-                text-transform: uppercase;
-                font-size: 4rem;
-
-                margin-right: -10%;
-            }
-
-            .camila .design--container #cutout {
-                width: 50%;
+        .camila .code p{
+            color: #EBEAE8;
+            position: absolute;
+            bottom: 50px;
+        }
 
 
-                display: flex;
-                height: 100%;
-                align-items: flex-end;
-                padding: 50px;
-
-                background-image: url(/img/graphic-design_cutout.png);
-                background-position: top;
-                background-size: 80%;
-                background-repeat: no-repeat;
-            }
-
-            @media (max-width: 640px) {
-                .camila .design--container {
-                    height: unset;
-                    flex-direction: column;
-                    padding: 30px;    
-                }
-                    .camila .design--container #gradient {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-
-                        margin-left: -40%;
-                    }
-
-                    .camila .design--container #gradient h1 {
-                        width: 80%;
-                        margin-right: -40%;
-                        font-size: 3rem;
-                    }
 
 
-                    .camila .design--container #cutout {
-                        width: 100%;
+
+    .camila .design {
+        background-color: #EBEAE8;
+        height: 100vh;
+
+        position: relative;
+    }
+
+    .camila .design--container {
+        height: 100%;
+        padding: 50px 30px;
+        position: relative;
+
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .camila .design .text{
+
+        border-radius: 5px;
+        padding: 50px;
+        height: 100%;
+    }
+
+        .camila .design h1{
+            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+            color: #343434;
+            text-transform: uppercase;
+            font-size: 84px;
+            max-width: 70%;
+            padding-bottom: 20px;
+        }
+
+        .camila .design h4{
+            color: #343434;
+            max-width: 40%;
+            font-weight: 300;
+        }
+
+        .camila .design p{
+            color: #343434;
+            position: absolute;
+            bottom: 50px;
+        }
 
 
-                        display: flex;
-                        height: 100%;
-                        align-items: flex-end;
-                        padding: 30px 0px;
+    .camila .design .lottie{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
 
-                        background-image: none;
-                    }
-            }
+    .camila .design .lottie lottie-player{
+        width: 60%;
+    }
+
+
 
         .camila .reachout {
             text-align: center;
@@ -592,13 +611,17 @@ h1, h2, h3, h4, p, span, ul, a {
 
             .camila .reachout h1 span{
                 font-size: 6rem;
-                -webkit-text-stroke: 1px #343434;
+                -webkit-text-stroke: 1px #EBEAE8;
                 color: transparent;
                 cursor: pointer;
             }
 
             .camila .reachout h1 span:hover{
-                color: #343434;
+                color: #EBEAE8;
+            }
+
+            .camila .reachout p, .camila .reachout a {
+                color: #EBEAE8;
             }
 
             @media (max-width: 640px) {
@@ -1210,18 +1233,31 @@ h1, h2, h3, h4, p, span, ul, a {
 
 
 
+.footer--wrap {
+    background-image: url(./img/background_hero1.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 .footer {
     max-width: 1600px;
     margin: 0 auto;
-
-
 }
+
 
 .footer-container {
     display: flex;
     padding: 20px;
     justify-content: space-between;
 }
+
+.footer span, .footer p, .footer a{
+    color: #EBEAE8;
+}
+
 
 @media (max-width: 840px) {
     .footer-container {
