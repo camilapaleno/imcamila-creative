@@ -1,3 +1,17 @@
+.overlay {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat;
+    background-image: url("./img/rm432-ca02.png");
+
+    pointer-events: none;
+    z-index: 9999;
+  }
+
 /* FONT FACE */
 @font-face {
     font-family: "Uncut Sans";
@@ -40,6 +54,28 @@
         url('fonts/Vegawanty/Vegawanty-Regular.woff') format('woff'),
         url('fonts/Vegawanty/Vegawanty-Regular.ttf') format('truetype');
     font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Welth Catriz";
+    src: url('fonts/Welth/welth_catritz_regular-webfont.eot');
+    src: url('fonts/Welth/welth_catritz_regular-webfont.eot') format('embedded-opentype'),
+        url('fonts/Welth/welth_catritz_regular-webfont.woff2') format('woff2'),
+        url('fonts/Welth/welth_catritz_regular-webfont.woff') format('woff'),
+        url('fonts/Welth/welth_catritz_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Welth Catriz";
+    src: url('fonts/Welth/welth_catritz_italic-webfont.eot');
+    src: url('fonts/Welth/welth_catritz_italic-webfont.eot') format('embedded-opentype'),
+        url('fonts/Welth/welth_catritz_italic-webfont.woff2') format('woff2'),
+        url('fonts/Welth/welth_catritz_italic-webfont.woff') format('woff'),
+        url('fonts/Welth/welth_catritz_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
     font-style: italic;
 }
 
@@ -110,11 +146,15 @@ h1, h2, h3, h4, p, span, ul, a {
     color: #343434;
 }
 
+body {
+    position: relative;
+}
+
 
 .camila {
-    background-color: #EBEAE8;
-    width: 100%;
+    background-color: #e7e4dd;
     
+    width: 100%;
 }
 
 .camila .camila--container {
@@ -125,9 +165,10 @@ h1, h2, h3, h4, p, span, ul, a {
 /** NAVBAR **/
 
 .camila .nav {
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
-    z-index: 10;
+    z-index: 12;
+    position: relative;
 }
 
     .camila .nav--container {
@@ -158,16 +199,16 @@ h1, h2, h3, h4, p, span, ul, a {
             }
 
         .camila #nav-home .nav--container a {
-            color: #EBEAE8;
+            color: #2F2A28;
         }
 
         .camila #nav-home .nav--container span {
-            color: #EBEAE8;
+            color: #2F2A28;
         }
 
             .camila #nav-home .nav--container ul li a{
                 text-decoration: none;
-                color: #EBEAE8;
+                color: #2F2A28;
             }
 
             @media (max-width: 640px) {
@@ -183,279 +224,202 @@ h1, h2, h3, h4, p, span, ul, a {
                 }
             }
 
+        .camila .nav hr{
+            margin: 0px 30px;
+        }    
 /************************************************
 
                     HOME 
                     
 ************************************************/
 
-.camila #woo{
-    position: absolute;
-    text-align: center;
-    z-index: 0;
-    margin-top: -20%;
-
-    display: none;
-}   
-
-    .camila #woo img{
-        width: 90%;
-        margin: 0 auto;
-    }   
-
-        @media (max-width: 640px) {
-            .camila #woo{
-                margin-top: 20%;
-            }   
-        }
-
 .hero--wrapper {
-    background-image: url(./img/background_hero1.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
+    background-image: url(./img/background_hero15.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .camila .hero {
-    overflow: hidden;
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 2000px;
+    margin: 0 auto 0 auto;
+    padding: 5px 0px;
+    z-index: 1;
+    
 }
 
 .camila .hero--container {
     width: 100%;
-    height: calc(100vh - 70px);
     position: relative;
-}
+    z-index: 1;
+    height: calc(100vh - 70px);
 
-    .camila .hero #hero-desktop{
-        position: absolute;
-        height: 60%;
-        bottom: 30px;
-        width: 60%;
-        max-width: 1200px;
-        border: 1px #EBEAE8 solid;
-        border-radius: 5px;
-
-        display: none;
-    } 
-
-    .camila .hero #hero-desktop .tabs {
-        position: absolute;
-        display: flex;
-        top: 10px;
-        left: 10px;
-    }
-
-    .camila .hero #hero-desktop .tabs .x{
-        height: 16px;
-        width: 16px;
-    }
-
-        .camila .hero #hero-desktop .tabs:after {
-            content: '';
-            height: 16px;
-            border-left: 3px solid #EBEAE8;
-            position: absolute;
-            transform: rotate(45deg);
-            left: 10px;
-        }
-        
-        .camila .hero #hero-desktop .tabs:before {
-            content: '';
-            height: 16px;
-            border-left: 3px solid #EBEAE8;
-            position: absolute;
-            transform: rotate(-45deg);
-            left: 10px;
-        }
-
-    .camila .hero #hero-desktop .tabs .circle{
-        background-color: #EBEAE8;
-        height: 15px;
-        width: 15px;
-        margin-left: 10px;
-        border-radius: 50%;
-    }
-
-
-
-    
-    .camila .hero #hero-mobile{
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
-        height: 60%;
-        width: 20%;
-        max-width: 400px;
-        border: 1px #EBEAE8 solid;
-        border-radius: 5px;
-
-        display: none;
-    } 
-
-        .camila .hero #hero-mobile .lines{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            top: 15px;
-            right: 15px;
-        } 
-
-        .camila .hero #hero-mobile .line {
-            width: 25px;
-            height: 3px;
-            background-color: #EBEAE8;
-            margin-bottom: 5px;
-            border-radius: 3px;
-        }
-
-
-
-        
-    .camila .hero #hero-blurb{
-        text-align: right;
-        width: 60%;
-        max-width: 800px;
-        position: absolute;
-        right: 60px;
-        bottom: 60px;
-        font-size: 18px;
-        color: #EBEAE8;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}        
 
     .camila .hero .hero-title {
         width: 100%;
-        height: 40%;
-        padding-top: 20px;
     }
 
 
-    .scroll {
-        position: relative;
-        width: 100vw;
-        height: 15%;
-        min-height: 150px;
-        overflow: hidden;
-        z-index: 1;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .m-scroll {
-        overflow: hidden;
-        height: 100%;
-        white-space: nowrap;
-        animation: scrollText 30s infinite linear;
-        margin: 0;
-        font-size: 0;
-        display: inline-block;
-      }
-      
-      .m-scroll span {
-        font-size: 150px;
-        display: inline-block;
-        min-width: 100vw;
-        margin: 0;
-        padding: 0;
-        color: white;
-      }
-      
-      @keyframes scrollText {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
+      @media (max-aspect-ratio: 3/4) {
+        .camila .hero--container {
+           height: unset;
+        }    
       }
 
+    .camila .star {
+    width: 40px;
+    }
 
-/*         .camila .hero .hero-title #hero-des{
-            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+
+    
+    .camila .hero-hi {
+        width: 100%;
+        text-align: center;padding: 20px;
+        
+    }
+
+        .camila .hero-hi h1 {
+            font-size: 4rem;
+            font-family: Uncut Sans, Arial, 'Times New Roman', Times, serif;
+            font-weight: 800;
+            color: #2F2A28;
+            opacity: 50%;
+            
+        }
+
+        .camila .hero-hi h1:first-child {
+            opacity: 30%;
+        }
+
+        .camila .hero-hi p{
             text-transform: uppercase;
-            line-height: 13vh;
-            font-size: 14vh;
-            color:#EBEAE8;
+            color: #EBEAE8;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 300px;
+
         }
 
-        .camila .hero .hero-title #hero-dev{
-            text-align: right;
-            font-size: 14vh;
-            line-height: 6vh;
-            font-style: italic;
-            color:#EBEAE8;
-        } */
 
-        @media (max-aspect-ratio: 8/7) {
-            .camila .hero--container {
-                height: calc(100vh - 100px);
-            }
-            .camila .hero #hero-desktop{
-                display: none;
-            } 
-            .camila .hero .hero-title #hero-des{
-                line-height: 100%;
-                font-size: 10vw;
-            }
-            .camila .hero .hero-title #hero-dev{
-                line-height: 100%;
-                font-size: 10vw;
-            }
-            .camila .hero #hero-desktop{
-                height: unset;
-                width: 100%;
-            } 
-            .camila .hero #hero-blurb{
-                width: 80%;
-                font-size: 14px;
-            }
+    .camila .hero-comp {
+        text-align: center;
+        width: 100%;
+        margin-top: -80px;
+        position: relative;
+    }
+
+    .camila .hero-comp lottie-player {
+
+    }
+
+        .camila .hero-comp .comp{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-    .camila .band {
-        height: 50px;
-        background-color: #EBEAE8;
+        .camila .hero-comp .comp img {
+            width: 300px;
+        }
+
+
+
+
+
+    .camila .scroll {
+        max-width: 2000px;
+        margin: 0 auto 0 auto;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .camila .hero-scroll-container {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .camila .hero-scroll-container div {
+        width: 2000px;
+        margin: 50px 0px;
+    }
+
+
+
+    .camila .blurb {
         width: 100%;
     }
+
+    .camila .blurb-container {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .camila .blurb p{
+       width: 50%;
+       text-transform: uppercase;
+       text-align: right;
+       margin: 50px 0px 0px 0px;
+    }
+
+    .camila .blurb p:nth-child(2){
+        text-align: left;
+        align-self: flex-end;
+     }
 
 
 
     .camila .summary {
         max-width: 1600px;
         margin: 0 auto;
-        padding: 30px 30px 60px 30px;
+        padding: 0px 30px 0px 30px;        
     }
 
     .camila .summary--container {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
 
-
-        padding: 30px 30px 30px 30px;
+        padding: 50px 0px;
     }
 
         .camila .summary--container .box{
             display: flex;
             flex-direction: column;
-            width: 20%;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            
+            width: 33%;
+            padding: 50px 30px;
+            text-align: center;
+
         }
 
             .camila .summary--container .box p {
-                color: #EBEAE8;
+                color: #2F2A28;
             }
 
             .camila .summary--container .box img{
-                width: 100px;
-                height: 100px;
+                width: 40px;
+                height: 40px;
                 margin: 0 auto;
                 border-radius: 50%;
 
                 margin-bottom: 30px;
                 animation: rotate 12s infinite linear;
-                filter: invert();
+
             }
 
             .camila .summary--container .box:nth-child(2) img{
@@ -483,11 +447,11 @@ h1, h2, h3, h4, p, span, ul, a {
             @media (max-width: 640px) {
                 .camila .summary--container {
                     flex-direction: column;
-                    padding: 50px 30px 30px 30px;
+                    padding: 0px;
                 }
                 .camila .summary--container .box{
                     width: 100%;
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
                     margin-top: 0px;
                 }
                 .camila .summary--container .box p{
@@ -497,139 +461,276 @@ h1, h2, h3, h4, p, span, ul, a {
             }
 
 
-    .camila .code {
-        background-color: #343434;
-        height: 100vh;
-        
-        position: relative;
-    }
 
-    .camila .code--container {
-        
-        height: 100%;
-        padding: 50px 30px;
-        position: relative;
-
-        max-width: 1600px;
-        margin: 0 auto;
-
-    }
-
-    .camila .code .text{
-
-        border-radius: 5px;
-        padding: 30px;
-        height: 100%;
-    }
-
-        .camila .code h1{
-            color: #EBEAE8;
-            text-transform: uppercase;
-            font-size: 84px;
-            max-width: 70%;
-            padding-bottom: 20px;
-        }
-
-        .camila .code h4{
-            color: #EBEAE8;
-            max-width: 40%;
-        }
-
-        .camila .code p{
-            color: #EBEAE8;
-            position: absolute;
-            bottom: 50px;
-        }
-
-
-
-
-
-    .camila .design {
-        background-color: #EBEAE8;
-        height: 100vh;
-
-        position: relative;
-    }
-
-    .camila .design--container {
-        height: 100%;
-        padding: 50px 30px;
-        position: relative;
-
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    .camila .design .text{
-
-        border-radius: 5px;
+    .camila .gradient {
+        width: 100%;
+        background-color: #e7e4dd;
+        max-width: 2000px;
+        margin: 0 auto 0 auto;
         padding: 50px;
-        height: 100%;
-    }
+        position: relative;
+    }       
 
-        .camila .design h1{
-            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
-            color: #343434;
-            text-transform: uppercase;
-            font-size: 84px;
-            max-width: 70%;
-            padding-bottom: 20px;
-        }
-
-        .camila .design h4{
-            color: #343434;
-            max-width: 40%;
-            font-weight: 300;
-        }
-
-        .camila .design p{
-            color: #343434;
-            position: absolute;
-            bottom: 50px;
-        }
-
-
-    .camila .design .lottie{
+    .camila .gradient #boomLottie {
         position: absolute;
-        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        left: 0;
         right: 0;
-        display: flex;
-        justify-content: flex-end;
+        top: 0;
+        bottom: 0;
     }
 
-    .camila .design .lottie lottie-player{
-        width: 60%;
+    
+    .camila .gradient-container {
+        background-image: url(./img/background_hero4.jpg);
+        background-size: cover;
     }
+            
+    .camila .design {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+        
+            .camila .design--container {
+                height: 100%;
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+            }
+        
+                .camila .design .title{
+                    margin-top: 50px;
+                    width: 2000px;
+                }
+
+                .camila .design .text {
+                    padding: 30px;
+                    text-align: center;
+                }
+
+                .camila .design .text-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 800px;
+                    margin: 0 auto;
+                }
+
+                .camila .design .text-container div {
+                    width: 45%;
+                    text-align: right;
+                    margin-top: 50px;
+                }
+
+                .camila .design .text-container div:nth-child(2) {
+                    text-align: left;
+                }
+
+                .camila .design .text p{
+                    text-transform: uppercase;
+                    color: #e7e4dd;
+                }
+
+        
+            @media (max-width: 1080px) {
+        
+            }
+
+
+    .camila .devices {
+        width: 500px;
+        margin: 0 auto;
+    }        
+
+    .camila .code {
+        width: 100%;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+        .camila .code--container {
+            height: 100%;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+            .camila .code .title{
+                width: 2000px;
+                margin-bottom: 50px;
+            }
+
+            .camila .code .text {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .camila .code .text-container {
+                display: flex;
+                flex-direction: column;
+                width: 800px;
+                margin: 0 auto;
+            }
+
+            .camila .code .text-container div {
+                width: 50%;
+                text-align: right;
+                margin-bottom: 50px;
+            }
+
+            .camila .code .text-container div:nth-child(2) {
+                align-self: flex-end;
+                text-align: left;
+            }
+
+            .camila .code .text p{
+                text-transform: uppercase;
+                color: #e7e4dd;
+            }
+
+        @media (max-width: 1080px) {
+
+        }
+
+
+
+
+
+
+
+
 
 
 
         .camila .reachout {
             text-align: center;
-            padding: 50px 0px 100px 0px;
+            padding: 100px 0px 150px 0px;
         }
 
             .camila .reachout h1 span{
                 font-size: 6rem;
-                -webkit-text-stroke: 1px #EBEAE8;
+                -webkit-text-stroke: 1px #2F2A28;
                 color: transparent;
                 cursor: pointer;
             }
 
             .camila .reachout h1 span:hover{
-                color: #EBEAE8;
+                color: #2F2A28;
             }
 
             .camila .reachout p, .camila .reachout a {
-                color: #EBEAE8;
+                color: #2F2A28;
             }
 
+
             @media (max-width: 640px) {
+                .camila .reachout {
+                    padding: 100px 0px 100px 0px;
+                }
                 .camila .reachout h1 span{
                     font-size: 3rem;
                     cursor: pointer;
                 }
+
+                .camila .reachout h1 {
+                    padding-bottom: 10px;
+                }
             }
+
+    .camila .laptops {
+        text-align: center;
+    }
+
+    .camila .laptops-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 50px 50px 50px 50px;
+    }
+
+
+    .camila .laptop {
+        width: 30%;
+        height: 400px;
+        padding: 50px;
+    }
+
+    .camila .laptop {
+        background-color: #E2DED6;
+        border-radius: 5px;
+    }
+
+    .camila .laptop img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+        
+
+    @media (max-aspect-ratio: 3/4) {
+        .camila .laptops {
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+        .camila .laptop {
+            width: 90%;
+        }
+    }
+
+    .camila .sayhi {
+        width: 100%;text-align: center;
+    }
+
+    .camila .sayhi a{
+        width: 100%;
+        
+        text-decoration: none;
+        
+        font-size: 80px;
+
+        transition: .2s;
+
+    }
+
+    .camila .sayhi .say {
+        
+        font-size: 80px;
+
+    }
+
+
+
+    .camila .sayhi .eml {
+       
+        font-size: 80px;
+
+
+        -webkit-text-stroke: 1px #2F2A28;
+        color: transparent;
+        cursor: pointer;
+    }
+    .camila .sayhi a:hover .eml {
+        -webkit-text-stroke: unset;
+        color: #2F2A28;
+    }
+
+    .camila .sayhi a:hover .say {
+        -webkit-text-stroke: 1px #2F2A28;
+        color: transparent;
+    }
 
 /************************************************
 
@@ -747,6 +848,9 @@ h1, h2, h3, h4, p, span, ul, a {
                 font-size: 1rem;
             }
         }
+
+
+
 
     .camila .portrait {
         display: flex;
@@ -965,30 +1069,60 @@ h1, h2, h3, h4, p, span, ul, a {
         margin: 0 auto;
     }
 
-    .portfolio--container h1 {
+    .portfolio .portfolio--title {
+        z-index: 90;
+        background-image: url(/img/background_hero1.jpg);
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 30px;
+
+        height: 30vh;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .portfolio--container .portfolio--title h1 {
         text-align: right;
-        font-size: 8rem;
+        font-size: 5rem;
         font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
         padding-top: 30px;
         padding-right: 30px;
         line-height: 80%;
+        color: #EBEAE8;
     }
 
-    .portfolio--container p {
+    .portfolio--container .portfolio--title p {
         text-align: right;
         padding-right: 30px;
+        color: #EBEAE8;
+        text-transform: uppercase;
+    }
+
+    .portfolio--container .portfolio--cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
         .portfolio--container .portfolio--card {
             display: flex;
-            padding: 30px 30px;
+            flex-direction: column;
 
+            padding: 30px 30px;
+            width: 33%;
         }
 
         .portfolio--container .portfolio--card .cardimg {
             position: relative;
             border: 1px solid #b0b0b0;
             border-radius: 5px;
+            width: 100%;
         }
 
             .portfolio--container .portfolio--card .cardimg .tabs {
@@ -1033,8 +1167,8 @@ h1, h2, h3, h4, p, span, ul, a {
             
 
         .portfolio--container .portfolio--card .cardimg .cardbkg{
-            width: 500px;
-            height: 350px;
+            width: 100%;
+            height: 300px;
             object-fit: cover;
             object-position: top;
             overflow: hidden;
@@ -1045,7 +1179,7 @@ h1, h2, h3, h4, p, span, ul, a {
         }
 
         .portfolio--container .portfolio--card .cardtext {
-            padding-left: 20px;
+            padding-top: 20px;
         }
 
             .portfolio--container .portfolio--card .cardtext p{
@@ -1065,7 +1199,7 @@ h1, h2, h3, h4, p, span, ul, a {
                 height: 10px;
                 border-top: 1px solid #000;
                 border-left: 1px solid #000;
-                transform: rotate(135deg);
+                transform: rotate(90deg);
             }
 
             .long-arrow-right::after {
@@ -1233,20 +1367,10 @@ h1, h2, h3, h4, p, span, ul, a {
 
 
 
-.footer--wrap {
-    background-image: url(./img/background_hero1.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
 .footer {
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
 }
-
 
 .footer-container {
     display: flex;
@@ -1255,7 +1379,7 @@ h1, h2, h3, h4, p, span, ul, a {
 }
 
 .footer span, .footer p, .footer a{
-    color: #EBEAE8;
+    color: #343434;
 }
 
 
