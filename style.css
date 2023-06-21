@@ -169,17 +169,18 @@ body {
     margin: 0 auto;
     z-index: 12;
     position: relative;
+    font-size: 12px;
 }
 
     .camila .nav--container {
         display: flex;
         justify-content: space-between;
-        padding: 30px 30px 20px 30px;
+        padding: 30px 30px 15px 30px;
     }
 
         .camila .nav--container a {
             text-decoration: none;
-            color: #343434;
+            color: #fff;
         }
 
         .camila .nav--container ul{
@@ -189,24 +190,53 @@ body {
 
         }
 
-            .camila .nav--container ul li{
-                padding: 0 0 0 40px;
+            .camila .nav--container ul:first-child li{
+                padding-right: 50px;
+                padding-left: 0px;
+            }
+
+            .camila .nav--container ul:nth-child(2) li{
+                padding-left: 50px;
+                padding-right: 0px;
             }
 
             .camila .nav--container ul li a{
                 text-decoration: none;
-                color: #343434;
+                color: #fff;
+                padding: 5px 10px;
             }
 
+            .camila .nav--container ul:nth-child(2) li:last-child a{
+                border: 1px solid #fff;
+            }
+    
+
         .camila #nav-home .nav--container a {
-            color: #2F2A28;
+            color: #fff;
         }
 
         .camila #nav-home .nav--container span {
-            color: #2F2A28;
+            color: #fff;
         }
 
             .camila #nav-home .nav--container ul li a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+        .camila #nav-dark .nav--container a {
+            color: #2F2A28;
+        }
+
+        .camila #nav-dark .nav--container span {
+            color: #2F2A28;
+        }
+
+        .camila #nav-dark .nav--container ul:nth-child(2) li:last-child a {
+            border: 1px solid #2F2A28;
+        }
+
+            .camila #nav-dark .nav--container ul li a{
                 text-decoration: none;
                 color: #2F2A28;
             }
@@ -226,7 +256,115 @@ body {
 
         .camila .nav hr{
             margin: 0px 30px;
-        }    
+            color: #fff;
+            box-shadow: none;
+            border: #fff .5px solid;
+        }  
+        
+        .camila #nav-dark hr{
+            color: #2F2A28;
+            border: #2F2A28 .5px solid;
+        }
+
+        .camila .bottom-nav--container {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px 20px 30px;
+            width: 100%;
+        } 
+        .camila .bottom-nav--container ul {
+            list-style: none;
+            width: 33%;
+        }
+        .camila .bottom-nav--container ul:nth-child(2){
+            text-align: center;
+        }
+        .camila .bottom-nav--container ul:last-child {
+            text-align: right;
+        }
+        .camila .bottom-nav--container ul li {
+            color: #fff;
+        }
+
+        .camila #nav-dark .bottom-nav--container ul li{
+            color: #2F2A28;
+        }
+
+        .camila .hamburger{
+            display: none;
+        }  
+    
+
+
+@media (max-width: 1080px) {
+    .camila .bottom-nav--container {
+        display: none;
+    }
+
+
+    .camila .hamburger{
+    display: block;
+       position: fixed;
+       top: 0;
+       right: 0;
+       color: #ee7050;
+       z-index: 100;
+       font-size: 36px;
+       margin: 20px;
+
+       background: none;
+        border: none;
+        padding: 0;
+        outline: inherit;
+    }  
+
+    .camila .nav {
+       position: fixed;
+       top: 0;
+        left: 0;
+    }
+
+    .camila .nav hr{
+        display: none;
+    }  
+
+    .camila .nav--container {
+
+
+        background-color: #837a6a;
+        
+        width: 100vw;
+        height: 100vh;
+        
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .camila .nav--container ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .camila .nav--container ul:first-child li {
+        padding: 20px;
+    }
+
+    .camila .nav--container ul:nth-child(2) li {
+        padding: 20px;
+    }
+
+    .camila .nav--container ul li {
+        padding: 20px;
+    }
+}
 /************************************************
 
                     HOME 
@@ -234,9 +372,11 @@ body {
 ************************************************/
 
 .hero--wrapper {
-    background-image: url(./img/background_hero15.jpg);
+   /*  background-image: url(./img/mymind-KnUX9qtR_4E-unsplash.jpeg); */
+    background-image: url(./img/mymind-KnUX9qtR_4E-unsplash.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     z-index: 1;
 }
 
@@ -252,7 +392,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 130px);
 
     display: flex;
     justify-content: center;
@@ -267,32 +407,42 @@ body {
       @media (max-aspect-ratio: 3/4) {
         .camila .hero--container {
            height: unset;
-        }    
+        }   
+        
+        .hero--wrapper {
+            /*  background-image: url(./img/mymind-KnUX9qtR_4E-unsplash.jpeg); */
+             background-image: url(./img/mymind-KnUX9qtR_4E-unsplash.jpeg);
+             background-size: 200%;
+         }
       }
 
     .camila .star {
-    width: 40px;
+        width: 40px;
     }
 
 
     
     .camila .hero-hi {
         width: 100%;
-        text-align: center;padding: 20px;
+        text-align: center;
+        padding: 20px;
         
     }
 
         .camila .hero-hi h1 {
-            font-size: 4rem;
-            font-family: Uncut Sans, Arial, 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            line-height: 2rem;
+            font-family: Uncut Sans, Arial, Helvetica, sans-serif;
             font-weight: 800;
-            color: #2F2A28;
-            opacity: 50%;
-            
+            color: #fff;
+            margin: 0 auto;
         }
 
-        .camila .hero-hi h1:first-child {
-            opacity: 30%;
+        .camila .hero-hi h1 span {
+            font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif;
+            color: #fff;
+            font-style: italic;
+            font-weight: 300;
         }
 
         .camila .hero-hi p{
@@ -300,7 +450,24 @@ body {
             color: #EBEAE8;
             width: 80%;
             margin: 0 auto;
-            max-width: 300px;
+            max-width: 400px;
+            font-size: 12px;
+        }
+
+        .camila .hero-hi a {
+            
+            color: #fff;
+            margin: 0 auto;
+           
+        }
+
+        .camila .hero-hi a.shop-templates {
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-left: auto;
+            display: block;
+            width: fit-content;
 
         }
 
@@ -333,52 +500,39 @@ body {
         }
 
 
+    @media (max-width: 1080px) {
+        .camila .hero {
+            
+            
+        }
+        
+        .camila .hero--container {
+
+        height: 100vh;
+
+        }    
+    }
 
 
 
     .camila .scroll {
-        max-width: 2000px;
         margin: 0 auto 0 auto;
         width: 100%;
         overflow: hidden;
+        opacity: 50%;
     }
 
     .camila .hero-scroll-container {
-        width: 100%;
+        width: 60%;
+        margin: 50px auto;
         text-align: center;
     }
     
     .camila .hero-scroll-container div {
-        width: 2000px;
-        margin: 50px 0px;
-    }
-
-
-
-    .camila .blurb {
         width: 100%;
+        margin: 0px 0px;
     }
 
-    .camila .blurb-container {
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .camila .blurb p{
-       width: 50%;
-       text-transform: uppercase;
-       text-align: right;
-       margin: 50px 0px 0px 0px;
-    }
-
-    .camila .blurb p:nth-child(2){
-        text-align: left;
-        align-self: flex-end;
-     }
 
 
 
@@ -402,13 +556,14 @@ body {
             flex-direction: column;
             
             width: 33%;
-            padding: 50px 30px;
+            padding: 30px 50px;
             text-align: center;
 
         }
 
             .camila .summary--container .box p {
                 color: #2F2A28;
+                font-size: 12px;
             }
 
             .camila .summary--container .box img{
@@ -445,6 +600,9 @@ body {
             }
 
             @media (max-width: 640px) {
+                .camila .summary {
+                    margin: 30px auto 0 auto;
+                }
                 .camila .summary--container {
                     flex-direction: column;
                     padding: 0px;
@@ -453,6 +611,7 @@ body {
                     width: 100%;
                     margin-bottom: 20px;
                     margin-top: 0px;
+                    padding: 10px;
                 }
                 .camila .summary--container .box p{
                     font-size: 14px;
@@ -461,143 +620,302 @@ body {
             }
 
 
-
-    .camila .gradient {
-        width: 100%;
-        background-color: #e7e4dd;
-        max-width: 2000px;
-        margin: 0 auto 0 auto;
-        padding: 50px;
-        position: relative;
-    }       
-
-    .camila .gradient #boomLottie {
-        position: absolute;
-        width: 100%;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-
-    
-    .camila .gradient-container {
-        background-image: url(./img/background_hero4.jpg);
-        background-size: cover;
-    }
-            
-    .camila .design {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-        
-            .camila .design--container {
-                height: 100%;
-                position: relative;
-
-                display: flex;
-                flex-direction: column;
-            }
-        
-                .camila .design .title{
-                    margin-top: 50px;
-                    width: 2000px;
-                }
-
-                .camila .design .text {
-                    padding: 30px;
-                    text-align: center;
-                }
-
-                .camila .design .text-container {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    width: 800px;
-                    margin: 0 auto;
-                }
-
-                .camila .design .text-container div {
-                    width: 45%;
-                    text-align: right;
-                    margin-top: 50px;
-                }
-
-                .camila .design .text-container div:nth-child(2) {
-                    text-align: left;
-                }
-
-                .camila .design .text p{
-                    text-transform: uppercase;
-                    color: #e7e4dd;
-                }
-
-        
-            @media (max-width: 1080px) {
-        
-            }
-
-
-    .camila .devices {
-        width: 500px;
-        margin: 0 auto;
-    }        
-
-    .camila .code {
-        width: 100%;
-
-        position: relative;
-        overflow: hidden;
-    }
-
-        .camila .code--container {
-            height: 100%;
-            position: relative;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-        }
-
-            .camila .code .title{
-                width: 2000px;
-                margin-bottom: 50px;
-            }
-
-            .camila .code .text {
+            .graphic-uxui {
+                margin-top: -200px;
                 padding: 30px;
+                width: 100%;
                 text-align: center;
             }
 
-            .camila .code .text-container {
-                display: flex;
-                flex-direction: column;
-                width: 800px;
+            .graphic-uxui .star {
                 margin: 0 auto;
             }
 
-            .camila .code .text-container div {
-                width: 50%;
+            .graphic-uxui h1 {
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif ;
+            }
+
+            .graphic-uxui p, .graphic-uxui li {
+               
+                font-size: 12px;
+            }
+
+            .graphic-uxui li {
+                list-style: none;
+            }
+
+            .graphic-uxui--container {
+                text-align: center;
+                max-width: 1080px;
+                margin: 0 auto;
+                padding: 60px;
+
+            }
+
+            .graphic-uxui--container .text {
+            }
+
+            .graphic-uxui--container .text div{
+            }
+
+            .graphic-uxui--container .computer {
+                width: 350px;
+                margin: 0 auto;
+            }
+
+            .graphic-uxui--container .computer img{
+                width: 100%;
+                padding: 30px;
+            }
+
+            @media (max-width: 840px) {
+                .graphic-uxui--container {
+                    padding: 30px;
+                    flex-direction: column;
+                }
+
+                .graphic-uxui--container .text {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .graphic-uxui--container .computer {
+                    width: 100%;
+                }
+                .graphic-uxui--container .computer img{
+                    width: 100%;
+                    padding: 30px 30px 0px 30px;
+                }
+    
+            }
+
+
+            .frontend-webdev {
+                
+                width: 100%;
+                text-align: center;
+                padding-bottom: 30px;
+                position: relative;
+            }
+
+            .frontend-webdev .star {
+                margin: 0 auto;
+            }
+
+            .frontend-webdev h1 {
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif ;
+            }
+
+            .frontend-webdev p, .frontend-webdev li {
+               
+                font-size: 12px;
+            }
+
+
+            .frontend-webdev--container {
+                max-width: 840px;
+                margin: 0 auto;
+                padding: 30px;
+            }
+
+            .frontend-webdev .scrolling-text {
+                max-width: 2000px;
+                position: absolute;
+                bottom: 0;
+                margin: 0 auto 0 auto;
+                width: 100%;
+                overflow: hidden;
+            }
+
+        
+            .camila .scrolling-text-container {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .camila .scrolling-text-container div {
+                width: 2000px;
+                margin: 0px 0px;
+            }
+        
+
+            .frontend-and-design {
+                display: flex;
+       
+                justify-content: center;
+                align-items: center;
+
+            }
+            .frontend-and-design div:first-child {
                 text-align: right;
-                margin-bottom: 50px;
+            }
+            .frontend-and-design div {
+                width: 40%;
+                padding: 50px;
             }
 
-            .camila .code .text-container div:nth-child(2) {
-                align-self: flex-end;
-                text-align: left;
+            .frontend-and-design h3{
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif ;
+            }
+            .frontend-and-design p{
+                font-size: 12px;
+            }
+            .frontend-and-design div img {
+                width: 100%;
+                padding: 50px;
             }
 
-            .camila .code .text p{
+            @media (max-width: 840px) {
+                .frontend-and-design {
+                    flex-direction: column;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                .frontend-and-design div:first-child {
+                    text-align: center;
+                }
+                .frontend-and-design div {
+                    width: 100%;
+                    padding: 30px 50px;
+                }
+            }
+
+            .devices {
+                width: 400px; 
+                margin: -150px auto 50px auto;
+            }
+
+            @media (max-width: 840px) {
+                .devices {
+                    width: 80%; 
+                    max-width: 300px; 
+                    margin: -100px auto 20px auto;
+                }
+            }
+
+
+            .partners {
+                padding: 50px 30px 30px 30px;
+                width: 100%;
+                text-align: center;
+                background-color: #E2DED6;
+            }
+
+            .partners .star {
+                margin: 0 auto;
+            }
+
+            .partners h3 {
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif ;
+            }
+
+            .partners p, .partners li {
+                
+                font-size: 12px;
+                max-width: 840px;
+                margin: 0 auto;
+            }
+
+            .partners--container {
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .partners--container img {
+                width: 200px;
+                height: fit-content;
+                object-fit: contain;
+                padding: 20px;
+            }
+
+
+
+
+            .developing-dream {
+                padding: 80px 30px;
+/*                 background-image: url(./img/3_grain_texture.jpg); */
+                background-color: #ee7050;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                z-index: 1;
+                text-align: center;
+                position: relative;
+            }
+
+            .developing-dream h3 {
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif ;
+                color: #fff;
+            }
+
+            .developing-dream p, .developing-dream li, .developing-dream a {
+                
+                font-size: 12px;
+                color: #fff;
+            }
+
+            .developing-dream a {
                 text-transform: uppercase;
-                color: #e7e4dd;
             }
 
-        @media (max-width: 1080px) {
+            .developing-dream a.see-examples {
+                border: 1px solid #fff;
+                padding: 5px 10px;
+                text-decoration: none;
+                
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+            }
 
-        }
+            .developing-dream--container {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .developing-dream--container span {
+                display: block;
+                font-family: Welth Catriz, Georgia, 'Times New Roman', Times, serif;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 24px;
+
+                border-radius: 50%;
+                background-color: #fff;
+                margin: 0 auto;
+                color: #e9a14f;
+            }
+
+            .developing-dream--container div {
+                width: 20%;
+            }
+
+
+            @media (max-width: 840px) {
+                .developing-dream {
+                    padding: 50px 30px; 
+                }
+                .developing-dream--container {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+                }
+
+                .developing-dream--container div {
+                    width: 100%;
+                    padding-bottom: 40px;
+                }
+
+                .developing-dream--container div:last-child {
+                    width: 100%;
+                    padding-bottom: 0px;
+                }
+            }
 
 
 
@@ -615,7 +933,7 @@ body {
         }
 
             .camila .reachout h1 span{
-                font-size: 6rem;
+                
                 -webkit-text-stroke: 1px #2F2A28;
                 color: transparent;
                 cursor: pointer;
@@ -627,6 +945,12 @@ body {
 
             .camila .reachout p, .camila .reachout a {
                 color: #2F2A28;
+                font-size: 12px;
+                
+            }
+
+            .camila .reachout p {
+                text-transform: uppercase;
             }
 
 
@@ -635,7 +959,7 @@ body {
                     padding: 100px 0px 100px 0px;
                 }
                 .camila .reachout h1 span{
-                    font-size: 3rem;
+                    
                     cursor: pointer;
                 }
 
@@ -658,6 +982,10 @@ body {
         padding: 50px 50px 50px 50px;
     }
 
+    .camila .laptops a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
 
     .camila .laptop {
         width: 30%;
@@ -670,6 +998,8 @@ body {
         border-radius: 5px;
     }
 
+
+    
     .camila .laptop img{
         width: 100%;
         height: 100%;
@@ -698,16 +1028,18 @@ body {
         width: 100%;
         
         text-decoration: none;
+        font-size: 36px;
         
-        font-size: 80px;
 
         transition: .2s;
 
     }
 
+
+
     .camila .sayhi .say {
         
-        font-size: 80px;
+        font-size: 36px;
 
     }
 
@@ -715,10 +1047,10 @@ body {
 
     .camila .sayhi .eml {
        
-        font-size: 80px;
+        font-size: 36px;
 
 
-        -webkit-text-stroke: 1px #2F2A28;
+        -webkit-text-stroke: 1px #e0d7d3;
         color: transparent;
         cursor: pointer;
     }
@@ -728,7 +1060,7 @@ body {
     }
 
     .camila .sayhi a:hover .say {
-        -webkit-text-stroke: 1px #2F2A28;
+        -webkit-text-stroke: 1px #e0d7d3;
         color: transparent;
     }
 
@@ -747,202 +1079,64 @@ body {
 
     .camila .about--container {
         width: 100%;
-        height: calc(100vh - 70px);
-        
-        padding: 20px 30px 30px 30px;
         text-align: center;
-
-        display: flex;
-        align-items: center;
     }
 
-
-        .camila .about img{
-            background-color: #ffffff;
-
-            width: 1200px;
-            height: 600px;
-            object-fit: cover;
-            margin: 0 auto;
-            border-radius: 50rem 50rem 0 0;
-            overflow: hidden;
-        }
-
-        .camila .about .about-title {
-            font-size: 1.8rem;
-            line-height: 200%;
-            position: absolute;
-            width: 50%;
-            text-align: left;
-            top: 30px;
-            align-self: flex-start;
-            max-width: 600px;
-        }
-
-        .camila .about #about-blurb {
-            position: absolute;
-            right: 30px;
-            bottom: 30px;
-            text-align: right;
-            width: 50%;
-            max-width: 500px;
-            align-self: flex-end;
-        }
-
-        @media (max-width: 1280px) {
-
-            .camila .about--container {
-                width: 100%;
-                height: 100vh;
-            }
-            .camila .about img{
-                background-color: #ffffff;
-    
-                width: 100%;
-                max-width: 800px;
-                height: 600px;
-                object-fit: cover;
-                margin: 0 auto;
-                border-radius: 50rem 50rem 0 0;
-                overflow: hidden;
-            }
-            .camila .about .about-title {
-                font-size: 1.2rem;
-                line-height: 200%;
-                position: relative;
-                width: 80%;
-                text-align: left;
-                top: 0px;
-                align-self: flex-start;
-                max-width: 600px;
-                margin-bottom: -50px;
-            }
-            .camila .about #about-blurb {
-                position: relative;
-                right: 0;
-                bottom: unset;
-                text-align: right;
-                width: 100%;
-                max-width: unset;
-                align-self: unset;
-
-            }
-            .camila .about--container {
-                height: calc(100vh - 70px);
-                flex-direction: column;
-            }
-
-   
-        }
-
-        @media (max-width: 640px) {
-            .camila .about--container {
-                width: 100%;
-                height: 120vh;
-            }
-            .camila .about .about-title {
-                position: relative;
-                width: 90%;
-            }
-            .camila .about .about-title {
-                font-size: 1rem;
-            }
-        }
-
-
-
-
-    .camila .portrait {
-        display: flex;
-        align-items: center;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    .camila .portrait--container {
-        width: 80%;
-        max-width: 1000px;
-        height: 100%;
-        margin: 0 auto;
-
-        display: flex;
-        align-items: center;
-    }
-
-        .camila .portrait--container h1 {
-            font-size: 3rem;
-            line-height: 100%;
-        }
-        .camila .portrait--container img {
-            width: 400px;            
-            margin-right: 5%;
-        }
-
-        @media (max-width: 840px) {
-            .camila .portrait--container {
-                width: 100%;
-                padding: 20px;
-                flex-direction: column;
-            }
-            .camila .portrait--container img {
-                width: 50%;            
-                margin-right: 20px;
-                align-self: flex-end;
-            }
-            .camila .portrait--container p {
-                width: 80%;
-                align-self: flex-start;
-                padding-top: 20px;
-            }
-
-        }
-
-    .camila #about-text {
+    .camila .about #portrait {
         width: 100%;
-        opacity: 90%;
-
+        max-width: 300px;
     }
 
-    .camila .letswork {
+    .camila .about p {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 12px;
+        padding-bottom: 50px;
+    }
+
+    .camila .about .me {
+        width: 100%;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        margin-top: 50px;
-        padding: 100px 0 50px 0;
-        overflow: hidden;
     }
 
-        .camila .letswork h1{
-            font-size: 6rem;
-            line-height: 100%;
-            font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
-        }
+    .camila .about .me #me {
+        width: 100%;
+    }
 
-        .camila #letswork-circle {
-            position: absolute;
-            width: 50%;
-            top: 0;
-            margin: 0 auto 0 auto;
-            left: 0; 
-            right: 0; 
-            opacity: 50%;
-        }
 
-        @media (max-width: 840px) {
-            .camila .letswork {
-                width: 100%;
-                margin-top: 20px;
-                padding: 20px 0 20px 0;
-                overflow: hidden;
-            }
-            .camila .letswork h1{
-                font-size: 3rem;
-                width: 90%;
-            }
+
+    .camila .about .me #thisisme {
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        top: 40%;
+        width: 250px;
+    }
+
+    @media (max-width: 1080px) {
+        .camila .about .me {
+            width: 100%;
+            position: relative;
+            overflow-y: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: center;
         }
+    
+        .camila .about .me #me {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+
+
+
+
+
 
 
 
@@ -1092,7 +1286,7 @@ body {
         font-size: 5rem;
         font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
         padding-top: 30px;
-        padding-right: 30px;
+
         line-height: 80%;
         color: #EBEAE8;
     }
@@ -1237,44 +1431,45 @@ body {
             }
 
 
-            @media (max-width: 840px) {
+            @media (max-width: 1080px) {
                 .portfolio--container h1 {
                     padding-RIGHT: 20px;
                     font-size: 3rem;
                 }
-                .portfolio--container p {
-                    padding: 0px 20px;
-                }
+
                 .portfolio--container .portfolio--card {
                     flex-direction: column;
                     justify-content: center;
-                    padding: 30px 0px;
-        
+                    padding: 30px 30px;
+                    width: 50%;
                 }     
-                .portfolio--container .portfolio--card .cardimg {
-                    margin: 20px;
-                }
+
                 .portfolio--container .portfolio--card .cardimg .cardbkg{
                     width: 100%;
                     height: 350px;
                 }
 
-                .portfolio--container .portfolio--card .cardtext {
-                    padding: 0px 20px 20px 20px;
-                }
-
-                .portfolio--container .portfolio--card .cardtext p{
-                    padding: 0;
-                }
 
                    
             }
 
             @media (max-width: 540px) {
-                .portfolio--container .portfolio--card .cardimg .cardbkg{
+
+            .portfolio--container .portfolio--title h1 {
+                text-align: right;
+                font-size: 3rem;
+                font-family: Vegawanty, Georgia, 'Times New Roman', Times, serif;
+                padding-top: 30px;
+                padding-right: 0px;
+                line-height: 80%;
+                color: #EBEAE8;
+            }
+                .portfolio--container .portfolio--card {
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 30px 30px;
                     width: 100%;
-                    height: 200px;
-                }
+                }   
             }
 
 

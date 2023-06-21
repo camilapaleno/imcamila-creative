@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="scripts.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://kit.fontawesome.com/e1ca0213f0.js" crossorigin="anonymous"></script>
     
     
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -39,54 +40,101 @@
             <div class="hero--wrapper">
 
                 <div class="nav fade--in-delay" id="nav-home">
-                    <div class="nav--container">
-                        <a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a>
-                        <a href="/index.html"><span>OPEN TO COLLABORATIONS AND OFFERS</span></a>
+                    <div class="nav--container" id="mobileMenu">
                         <ul>
+                            <li><a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a></li>
+                            <li><a href="/index.html">home</a></li>
                             <li><a href="/about.html">about</a></li>
-                            <li><a href="/portfolio.html">portfolio</a></li>
+                            <li><a href="/contact.html">contact</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/portfolio.html">development portfolio</a></li>
+                            <!-- <li><a href="https://codepen.io/collection/PYrOYe" target="_blank">resources for developers</a></li> -->
+                            <li><a>downloadable site templates</a></li>
                         </ul>
                     </div>
-                    <hr>
+
+                    <hr>                    
+                    <div class="bottom-nav--container">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <li>OPEN TO COLLABORATIONS AND OFFERS</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                &#8673;
+                                <br>
+                                Coming soon!
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </div>
+                <button class="hamburger" onclick="toggleMenu()">
+                    &#x2630;
+                </button>
                 
                 <div class="hero">
                     <div class="hero--container">
 
                         <div class="hero-hi">
-                            <h1>Hi, I'm Camila </h1>
-                            <h1><i>I like to make websites.</i></h1>
+                            <!-- <h1><span>Hello,</span> I'm Camila!  </h1>
+                            <h1>I make <span>websites</span>.</h1>
                             <br>
+                            <h1>&#10041;</h1><Br> -->
+                                <lottie-player src="./img/helloimcamila.json" id="helloImCamilaLottie" background="transparent"  speed="1"  style="width: 300px; height: 300px; margin: 0 auto;"  autoplay></lottie-player>
+                                <br><br>
                             <p>
                                 I’m a web designer and developer based in Los Angeles, CA.
                                 <br><br>
                                 I specialize in creating and fine-tuning business’ online presence through content creation, social media marketing, SEO, and of course, building websites.
                                 <br><br>
-                                <b>Have an idea?</b>
-                                <br><br>
-                                LET’S WORK TOGETHER >
+                                <a href="./portfolio.html" class="shop-templates">see work for past clients &#8599;</a>
+                                <!-- <br>
+                                <a href="#">WANT SOMETHING CUSTOM? LET’S WORK TOGETHER. &#8599;</a> -->
+                                <br><br><br><br><br><br>
                             </p>
                         </div>
-
-<!--                         <div class="hero-comp">
-                            <lottie-player src="./img/hero.json" id="heroLottie" background="transparent"  speed="2" autoplay></lottie-player>
-                            <div class="comp">
-                                <img src="./img/gradcomp2.png"> 
-                            </div>
-                           
-                        </div> -->
+                        <img style="position: absolute; bottom: 0; width: 100%; z-index: -1;" src="./img/hero-line.png">
                     </div>
                 </div>
             </div>
-                <div class="scroll">
-                    <div class="hero-scroll-container">
-                        <div>
-                            <lottie-player src="./img/scroll2.json" id="scrollLottie" background="transparent"  speed="1"></lottie-player>
-                        </div>
-                    </div>
+            <div>
+                <img style="width: 100%; margin: 50px 0 100px 0;" src="./img/creative-design-meets-web-dev.png">
+            </div>
+
+            <div class="devices">
+                
+                <img style="width: 100%;" class="fade--up" src="./img/computer-sample-2.png">
+            </div>
+            <div class="frontend-and-design">
+                <div class="fade--up">
+                    <h3>front-end web development</h3>
+                    <br><br>
+                    <p>I use efficient, contemporary, and clean code. Web development has come a long way, so it's crucial to keep up with the current best practices and trends in development.
+                        <br><br>
+                        I use HTML to create the framework, and CSS to style the HTML. Styling with CSS is one of my favorite things to do and I have a strong attention to detail. Javascript makes stuff happen, like animations or toggling a hamburger menu open/closed. I've used the Javascript library React.js for my recent projects. I've been loving the ability to reuse components and the ease of use. I use Github to keep everything organized and Github pages to host websites when I can.
+
+
+
+                    </p>
+
                 </div>
 
-                <div class="summary">
+                <div class="fade--up-delay">
+                    <h3>graphic & UX design</h3>
+                    <br><br>
+                    <p>With most people living a huge part of their lives online, it's becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.
+                        <br><br>
+                        In order to design a website and all of it's components, I use Adobe Tools. I use After Effects and Lottie Files to create simple animations (like the ones on this website). I also work with Blender to create beautiful 3D animations and graphics.
+                        <br><br><br></p>
+                </div>
+            </div>
+
+
+<!--                 <div class="summary">
                     <div class="summary--container">
                         <div class="box fade--up">
                             <img src="./img/star.png">
@@ -105,7 +153,6 @@
                                 UX Design
                                 <br><br>
                                
-                                <br><br>
                                 I specialize in creating and fine-tuning business’ online presence through content 
                                 creation, social media marketing, SEO, and of course, building websites.
                             </p>
@@ -122,128 +169,178 @@
                             </p>
                         </div>
                     </div>
-                </div>
-            
-            <div class="gradient">
-            <lottie-player src="./img/boom.json" id="boomLottie" background="transparent"  speed="1"></lottie-player>
-            <div class="gradient-container">
+                </div> -->
 
-                
-                <div class="design">
-                    <div class="design--container">
-                        <div class="title">
-                            <lottie-player src="./img/designscroll.json" id="designScrollLottie" background="transparent"  speed="1"></lottie-player>
-                        </div>
-
-                        <div class="text">
-                            <img src="./img/starw.png" class="star">
-                            <div class="text-container">
-                                <div>
-                                    <p>Adobe xd 
-                                    <br>
-                                    <b>For mockups</b>
-                                    <br><bR>
-                                    Adobe illustrator, 
-                                    <br>
-                                    Adobe after effects,
-                                    <br>
-                                    and Lottie files
-                                    <br>
-                                    <b>For web graphics and animations</b></p>
-
-                                    <br>
-                                    
-                                    <p class="fade--up">With most people living a huge part of their lives online, it's becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.</p>
-                                </div>
-                                <div>
-                                    <p>
-                                        HTML
-                                        <br>
-                                        <b>For the framework</b>
-                                        <br><br>
-                                        CSS
-                                        <br>
-                                        <b>To style</b>
-                                        <br><br>
-                                        Javascript
-                                        <br> 
-                                        <b>To make things happen</b>
-                                        <br>
-                                    </p>
-    
-                                        <br>
-                                        
-                                        <p class="fade--up">Web development has come a long way. It's crucial to keep up with the current best practices and trends in development.</p>
-                                </div>                              
-                            </div>                
-                        </div>
-                    </div>
-
-                </div>
-                <div class="devices">
-                    <lottie-player src="./img/devices.json" id="devicesLottie" background="transparent"  speed="1"></lottie-player>
-                </div>
-                <div class="code">
-                    <div class="code--container">
-
-                  
-                        <div class="text" style="opacity: 0;">
-                            <div class="text-container">
-                                <div>
-                                    <p>Adobe xd 
-                                    <br>
-                                    For mockups
-                                    <br><bR>
-                                    Adobe illustrator 
-                                    <br>
-                                    Adobe after effects
-                                    <br>
-                                    Lottie files
-                                    <br>
-                                    For web graphics and animations</p>
-
-                                    <br>
-                                    
-                                    <p class="fade--up">With most people living a huge part of their lives online, it's becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.</p>
-                                </div>
-                  
-                            </div>
-                            <img src="./img/starw.png" class="star">
-                        </div>
+<!--             <div class="graphic-uxui">
+             <h1>&#10059;</h1>
+                <br><br>
+                <div class="graphic-uxui--container">
+                    <div class="text">
                         
-
-                        <div class="title">
-                            <lottie-player src="./img/designscroll.json" id="codeScrollLottie" background="transparent"  speed="1"></lottie-player>
+                        <h1><i>graphic</i> & UX/UI design</h1>
+                        <br>
+                        <p>
+                            With most people living a huge part of their lives online, it’s becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.
+                            <br><br>
+                            Background in marketing, photo, social media (photoshop, etc) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam ante, semper sed tincidunt ac, scelerisque ut libero. Praesent sed sapien quis enim mattis porta. Phasellus est lectus, sagittis id tortor a, sagittis tempor turpis. Cras eros quam, condimentum aliquam dapibus tincidunt, lacinia sed libero. Integer sit 
+                        </p>
+                        <Br>
+                        <div>
+                            <ul>
+                                <li>Adobe xd for mockups</li>
+                                <li>Adobe illustrator</li>
+                                <li>Adobe after effects</li>
+                                <li>Lottie files For web graphics and animations</li>
+                            </ul>
+                            <ul>
+                                <li>Adobe xd for mockups</li>
+                                <li>Adobe illustrator</li>
+                                <li>Adobe after effects</li>
+                                <li>Lottie files For web graphics and animations</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="computer">
+                        <img src="./img/computer-sample-2.png">
+                    </div>
+                </div>
+            </div> 
+
+            <div class="frontend-webdev">
+                <div class="frontend-webdev--container">
+                    <div class="text">
+                        <h1>front-end <i>web development</i></h1>
+                        <br>
+                        <p>
+                            With most people living a huge part of their lives online, it’s becoming increasingly important for your online presence to properly represent you. With the right imagery and wording you can effectively communicate your message to your desired audience.
+                            <br><br>
+                            Background in marketing, photo, social media (photoshop, etc) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam ante, semper sed tincidunt ac, scelerisque ut libero. Praesent sed sapien quis enim mattis porta. Phasellus est lectus, sagittis id tortor a, sagittis tempor turpis. Cras eros quam, condimentum aliquam dapibus tincidunt, lacinia sed libero. Integer sit 
+                        </p>
+                    </div>
+
+                </div>                    
+                <div class="scrolling-text">
+                    <div class="scrolling-text-container">
+                        <div>
+                            <lottie-player src="./img/wavy-meetsweb.json" id="frontendLottie" background="transparent"  speed="1"></lottie-player>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div> -->
+
+            <div class="partners fade--up-delay">
+                <h3>prefer a <i>web builder</i> over code?</h3>
+                <br><br>
+                <p>
+                   Sometimes, clients don't need something super custom and prioritize quick and frequent updates. If this sounds like you, I can build a website for you using a web builder. This is faster for me to create (and cheaper!). Once set up, you'll be able to log in and make further changes on your own if you'd like!
+                </p>
+                <br><br>
+                <div class="partners--container">
+                    <img src="./img/shopify.png">
+                    <img src="./img/wordpress.png">
+                    <img src="./img/squarespace.png">
+                    <img src="./img/wix.png">
+                    <img src="./img/woocommerce.png">
                 </div>
             </div>
-            </div>
 
-            <div class="laptops">
-                <img src="./img/star.png" class="star">
+            <div class="developing-dream">
+                <img style="position: absolute; top: 0; left: 0; width: 100%;" src="./img/hero-line.png">
+                <h3 class="fade--up">developing your <i>dream website</i></h3>
+                <br>
+                <p class="fade--up-delay">A custom website built just for you</p>
+                <br><br>
+                <div class="developing-dream--container">
+                    <div class="fade--up-delay">
+                        <span>1</span>
+                        <br>
+                        <p>MOCKUP PHASE
+                            <br><br>
+                            You'll get:
+                            <br><br>
+                            + Adobe Xd file
+                            <br>
+                            + All color hex codes, fonts, and styles
+                            <br>
+                            + All assets
+                            <br>
+                            + 2-3 rounds of revisions (if needed)</p>
+                    </div>
+                    <div class="fade--up">
+                        <span>2</span>
+                        <br>
+                        <p>DEVELOPMENT PHASE
+                            <br><br>
+                            Depending on your needs, you'll get EITHER:
+                            <br><br>
+                            A.) Code in html + css + js
+                            <br>
+                            B.) An account with the desired web builder
+                            <br><br>
+                            You'll also get:
+                            <br>
+                            + A fully responsive site (so it will look great on tablets and mobile as well
+                            <br>
+                            + 1 more revision</p>
+                    </div>
+                    <div class="fade--up-delay">
+                        <span>3</span>
+                        <br>
+                        <p>LAUNCH PHASE
+                            <br><br>
+                            Depending on your needs, I may:
+                            <br>
+                            + Set up a hosting account
+                            <br><br>
+                            I will definitely:
+                            <br>
+                            + Set up meta data for seo and social media sharing
+                            <br>
+                            + Add a browser icon</p>
+                    </div>
+                    <div class="fade--up">
+                        <span>4</span>
+                        <br>
+                        <p>MAINTENCE
+                            <br><br>
+                            Web builders and hosting services require a monthly or yearly cost. 
+                            <br><br>
+                            If I’m needed for any edits or changes, I charge an hourly rate. 
+                            </p>
+                    </div>
+                </div>
                 <br><br><br>
-                <p>samples of my work from past clients</p>
+                <a href="./portfolio.html" class="see-examples">See examples from past clients &#8599;</a>
+                <br>
+                <a href="./contact.html">Reach out to me &#8599;</a>
+            </div>
+
+<!-- 
+            <div class="laptops">
+
                 <div class="laptops-container">
-                    <div class="laptop">
+                    <div class="laptop fade--in-delay">
                         <img src="/img/laptop2.png">
                     </div>
-                    <div class="laptop">
+                    <div class="laptop fade--in">
                         <img src="/img/laptop2.png">
                     </div>
-                    <div class="laptop">
+                    <div class="laptop fade--in-delay">
                         <img src="/img/laptop2.png">
                     </div>
                 </div>
-                <a href="#">see more</a><div class="long-arrow-right"></div>
+                <a href="./portfolio.html">see more &#8599;</a>
             </div>
-
+ -->
             <div class="reachout">
                 <div class="sayhi">
-                    <a href="#"><span class="say">say</span> hi<span class="eml">@imcamila.com</span></a>
+                    <a href="mailto:hi@imcamila.dev"><span class="say">say</span> hi<span class="eml">@imcamila.dev</span></a>
                 </div>
                 <div>
-                    <img src="./img/star.png" class="star">
+                    <br>
+                   <h1>&#8673;</h1>
+                   <br>
                     <p>I am currently open to collaborations and offers. Let's work together.</p>
                 </div>
             </div>
@@ -264,63 +361,18 @@
 
     <script src="./script.js"></script>
     <script>
+
         LottieInteractivity.create({
             player: "#scrollLottie",
             mode: 'scroll',
             actions: [
             {
-                visibility:[0, 1.0],
+                visibility:[0.2, 0.6],
                 type: "seek",
-                frames: [0, 120],
+                frames: [0, 150],
             },
             ]
         });
-        LottieInteractivity.create({
-            player: "#designScrollLottie",
-            mode: 'scroll',
-            actions: [
-            {
-                visibility:[0, 1.0],
-                type: "seek",
-                frames: [0, 120],
-            },
-            ]
-        });
-        LottieInteractivity.create({
-            player: "#devicesLottie",
-            mode: 'scroll',
-            actions: [
-            {
-                visibility:[0, 0.8],
-                type: "seek",
-                frames: [0, 210],
-            },
-            ]
-        });
-        LottieInteractivity.create({
-            player: "#boomLottie",
-            mode: 'scroll',
-            actions: [
-            {
-                visibility:[0.4, 1.0],
-                type: "seek",
-                frames: [0, 300],
-            },
-            ]
-        });
-        LottieInteractivity.create({
-            player: "#codeScrollLottie",
-            mode: 'scroll',
-            actions: [
-            {
-                visibility:[0, 1.0],
-                type: "seek",
-                frames: [0, 120],
-            },
-            ]
-        });
-
-
     </script>
     <!-- <div class="overlay"></div> -->
 </body>

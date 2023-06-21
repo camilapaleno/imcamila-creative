@@ -29,18 +29,26 @@
     <div class="camila">
         <div class="camila--container">
 
-            <div class="nav">
-                <div class="nav--container">
-                    <a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a>
+            <div class="nav fade--in-delay" id="nav-dark">
+                <div class="nav--container" id="mobileMenu">
                     <ul>
+                        <li><a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a></li>
+                        <li><a href="/index.html">home</a></li>
                         <li><a href="/about.html">about</a></li>
-                        <li><a href="/portfolio.html">portfolio</a></li>
                         <li><a href="/contact.html">contact</a></li>
                     </ul>
+                    <ul>
+                        <li><a href="/portfolio.html">development portfolio</a></li>
+                        <!-- <li><a href="https://codepen.io/collection/PYrOYe" target="_blank">resources for developers</a></li>-->
+                        <li style="display: none;"><a href="#">downloadable templates</a></li> 
+                    </ul>
                 </div>
-                <hr>
-            </div>
 
+                <hr>                    
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                &#x2630;
+            </button>
             
             
             <div class="portfolio">
@@ -52,8 +60,103 @@
                         </p>
                     </div>
 
+                    <P style="text-align: center;">FOR CREATIVES</P>
 
                     <div class="portfolio--cards">
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/tom_preview3.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    STATEMENT
+                                </h4>
+                                <p>
+                                    Simple, visual. 
+                                    Created for artists, photographers, or other visual portfolios.
+                                    Made with pure HTML and CSS.
+                                </p>
+                                <a class="preview-link" href="./portfolio/statement.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/journal_preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    JOURNAL
+                                </h4>
+                                <p>
+                                    Simple, visual. 
+                                    Created for artists, photographers, or other visual portfolios.
+                                    Made with pure HTML and CSS.
+                                </p>
+                                <a class="preview-link" href="./portfolio/journal.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/gallery_preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    GALLERY
+                                </h4>
+                                <p>
+                                    Simple, visual. 
+                                    Created for artists, photographers, or other visual portfolios.
+                                    Made with pure HTML and CSS.
+                                </p>
+                                <a class="preview-link" href="./portfolio/gallery.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/businesscard_preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    BUSINESS CARD
+                                </h4>
+                                <p>
+                                    Simple, visual. 
+                                    Created for artists, photographers, or other visual portfolios.
+                                    Made with pure HTML and CSS.
+                                </p>
+                                <a class="preview-link" href="./portfolio/businesscard.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+
                         <div class="portfolio--card fade--up-delay">
                             <div class="cardimg">
                                 <div class="tabs">
@@ -74,31 +177,9 @@
 
                                     Made with pure HTML and CSS.
                                 </p>
-                                <a class="preview-link" href="./portfolio/devon.html">Preview<div class="long-arrow-right"></div></a> 
+                                <a class="preview-link" href="./portfolio/devon.html">Preview &#8599;</a> 
                             </div>
 
-                        </div>
-
-                        <div class="portfolio--card fade--up-delay">
-                            <div class="cardimg">
-                                <div class="tabs">
-                                    <div class="x"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </div>
-                                <img class="cardbkg" src="/img/mountain_preview1.png">
-                            </div>
-                            <div class="cardtext">
-                                <h4>
-                                MOUNTAIN
-                                </h4>
-                                <p>
-                                    Professional, modern, illustrative.
-
-                            Made with pure HTML and CSS.
-                                </p>                     
-                                <a class="preview-link" href="./portfolio/mountain.html">Preview<div class="long-arrow-right"></div></a>        
-                            </div>
                         </div>
 
                         <div class="portfolio--card fade--up-delay">
@@ -112,14 +193,14 @@
                             </div>
                             <div class="cardtext">
                                 <h4>
-                                    TOM
+                                    POST IT
                                 </h4>
                                 <p>
                                     Simple, visual. 
                                     Created for artists, photographers, or other visual portfolios.
                                     Made with pure HTML and CSS.
                                 </p>
-                                <a class="preview-link" href="./portfolio/tom.html">Preview<div class="long-arrow-right"></div></a> 
+                                <a class="preview-link" href="./portfolio/postit.html">Preview &#8599;</a> 
                             </div>
 
                         </div>
@@ -131,19 +212,80 @@
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                 </div>
-                                <img class="cardbkg" src="/img/sky_preview2.png">
+                                <img class="cardbkg" src="/img/nikon_preview1.png">
                             </div>
                             <div class="cardtext">
                                 <h4>
-                                    SKY
+                                NIKON
                                 </h4>
                                 <p>
-                                    Bold, futuristic, informational. Made with pure HTML and CSS.
-                                </p>                           
-                                <a class="preview-link" href="./portfolio/sky.html">Preview<div class="long-arrow-right"></div></a>  
+                                    My photography and travel site.
+
+                                    Created for me.
+                                
+                                Made with HTML and CSS.
+                                </p>                     
+                                <a class="preview-link" href="./portfolio/nikon.html">Preview &#8599;</a>        
                             </div>
                         </div>
 
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/danielle_preview2.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    DANIELLE
+                                </h4>
+                                <p>
+                                    Chic, delicate, artistic
+
+                    Created for a marketing agency in Los Angeles.
+
+                    Made with CSS in Squarespace.
+                                </p>
+                                <a class="preview-link" href="./portfolio/danielle.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio--card" style="opacity: 0;">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/michael-preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    Website Preview
+                                </h4>
+                                <p>
+                                    Simple website description. 
+
+                                    Created for client. 
+
+                                    Made with HTML and CSS.
+                                </p>    
+                                <a class="preview-link">Preview &#8599;</a>                         
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <p style="text-align: center;">PLACES</p>
+
+                    <div class="portfolio--cards">
                         <div class="portfolio--card fade--up-delay">
                             <div class="cardimg">
                                 <div class="tabs">
@@ -164,11 +306,15 @@
 
                                     Made with HTML and CSS.
                                 </p>  
-                                <a class="preview-link" href="./portfolio/villa.html">Preview<div class="long-arrow-right"></div></a>                           
+                                <a class="preview-link" href="./portfolio/villa.html">Preview &#8599;</a>                           
                             </div>
 
                         </div>
+                    </div>
 
+                    <P style="text-align: center;">FOR CLOTHING BRANDS</P>
+
+                    <div class="portfolio--cards">
                         <div class="portfolio--card fade--up-delay">
                             <div class="cardimg">
                                 <div class="tabs">
@@ -176,21 +322,24 @@
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                 </div>
-                                <img class="cardbkg" src="/img/camila_preview1.jpg">
+                                <img class="cardbkg" src="/img/simp_preview1.png">
                             </div>
                             <div class="cardtext">
                                 <h4>
-                                    CAMILA
+                                    SIMP
                                 </h4>
                                 <p>
-                                    Modern, colorful, animated.
-                            My previous web portfolio featuring animations made in Adobe Premiere Pro.
-                            Made with React.js.
-                                </p>    
-                                <a class="preview-link" href="./portfolio/camila.html">Preview<div class="long-arrow-right"></div></a>                         
-                            </div>
-                        </div>
+                                    Simple and impactful single product page.
 
+                                    Created for a clothing brand in Los Angeles.
+                                
+                                Made with HTML/CSS and Shopify.
+                                </p>
+                                <a class="preview-link" href="./portfolio/simp.html">Preview &#8599;</a> 
+                            </div>
+
+                        </div>
+  
                         <div class="portfolio--card fade--up-delay">
                             <div class="cardimg">
                                 <div class="tabs">
@@ -211,7 +360,104 @@
 
                                     Made with HTML and CSS.
                                 </p>    
-                                <a class="preview-link" href="./portfolio/michael.html">Preview<div class="long-arrow-right"></div></a>                         
+                                <a class="preview-link" href="./portfolio/michael.html">Preview &#8599;</a>                         
+                            </div>
+                        </div>
+
+                        <div class="portfolio--card" style="opacity: 0;">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/michael-preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    Website Preview
+                                </h4>
+                                <p>
+                                    Simple website description. 
+
+                                    Created for client. 
+
+                                    Made with HTML and CSS.
+                                </p>    
+                                <a class="preview-link">Preview &#8599;</a>                         
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <P style="text-align: center;">FOR TECH, BUSINESS, EDUCATION</P>
+
+                    <div class="portfolio--cards">
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/mountain_preview1.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                MOUNTAIN
+                                </h4>
+                                <p>
+                                    Professional, modern, illustrative.
+
+                            Made with pure HTML and CSS.
+                                </p>                     
+                                <a class="preview-link" href="./portfolio/mountain.html">Preview &#8599;</a>        
+                            </div>
+                        </div>
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/sky_preview2.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    SKY
+                                </h4>
+                                <p>
+                                    Bold, futuristic, informational. Made with pure HTML and CSS.
+                                </p>                           
+                                <a class="preview-link" href="./portfolio/sky.html">Preview &#8599;</a>  
+                            </div>
+                        </div>
+
+
+
+                        <div class="portfolio--card fade--up-delay">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/camila_preview1.jpg">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    CAMILA
+                                </h4>
+                                <p>
+                                    Modern, colorful, animated.
+                            My previous web portfolio featuring animations made in Adobe Premiere Pro.
+                            Made with React.js.
+                                </p>    
+                                <a class="preview-link" href="./portfolio/camila.html">Preview &#8599;</a>                         
                             </div>
                         </div>
 
@@ -235,7 +481,7 @@
 
                                     Made with HTML and CSS.
                                 </p>   
-                                <a class="preview-link" href="./portfolio/bruin.html">Preview<div class="long-arrow-right"></div></a>                          
+                                <a class="preview-link" href="./portfolio/bruin.html">Preview &#8599;</a>                          
                             </div>
                         </div>
 
@@ -259,7 +505,31 @@
                                     Created for an education company and includes a store, learning portals, event information, and account creation.
                                     Made with HTML and CSS and a backend team.
                                 </p>                      
-                                <a class="preview-link" href="./portfolio/neuro.html">Preview<div class="long-arrow-right"></div></a>       
+                                <a class="preview-link" href="./portfolio/neuro.html">Preview &#8599;</a>       
+                            </div>
+                        </div>
+
+                        <div class="portfolio--card" style="opacity: 0;">
+                            <div class="cardimg">
+                                <div class="tabs">
+                                    <div class="x"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <img class="cardbkg" src="/img/michael-preview.png">
+                            </div>
+                            <div class="cardtext">
+                                <h4>
+                                    Website Preview
+                                </h4>
+                                <p>
+                                    Simple website description. 
+
+                                    Created for client. 
+
+                                    Made with HTML and CSS.
+                                </p>    
+                                <a class="preview-link">Preview &#8599;</a>                         
                             </div>
                         </div>
                     </div>

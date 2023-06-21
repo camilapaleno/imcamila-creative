@@ -29,19 +29,26 @@
     <div class="camila">
         <div class="camila--container">
 
-            <div class="nav">
-                <div class="nav--container">
-                    <a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a>
+            <div class="nav fade--in-delay" id="nav-dark">
+                <div class="nav--container" id="mobileMenu">
                     <ul>
+                        <li><a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a></li>
+                        <li><a href="/index.html">home</a></li>
                         <li><a href="/about.html">about</a></li>
-                        <li><a href="/portfolio.html">portfolio</a></li>
                         <li><a href="/contact.html">contact</a></li>
                     </ul>
+                    <ul>
+                        <li><a href="/portfolio.html">development portfolio</a></li>
+                        <!-- <li><a href="https://codepen.io/collection/PYrOYe" target="_blank">resources for developers</a></li>-->
+                        <li style="display: none;"><a href="#">downloadable templates</a></li> 
+                    </ul>
                 </div>
-                <hr>
-            </div>
 
-            
+                <hr>                    
+            </div>       
+            <button class="hamburger" onclick="toggleMenu()">
+                &#x2630;
+            </button>     
             
             <div class="contact">
                 <div class="contact--container">
@@ -53,8 +60,6 @@
                     </p>
                 </div> 
             </div>
-
-           
 
             <div class="connect">
                 <div class="connect--container">

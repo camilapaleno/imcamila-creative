@@ -33,3 +33,14 @@ function resize(){let scale,
     wrapper.style.height = isMax?'':maxHeight * scale;
     outer.style.marginTop= isMax?'':'-' + (maxHeight - (maxHeight * scale))/2 + 'px';
 }
+
+
+
+function toggleMenu() {
+    var x = document.getElementById("mobileMenu");
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  }

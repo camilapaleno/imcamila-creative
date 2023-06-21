@@ -29,44 +29,50 @@
     <div class="camila">
         <div class="camila--container">
 
-            <div class="nav">
-                <div class="nav--container">
-                    <a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a>
+            <div class="nav fade--in-delay" id="nav-dark">
+                <div class="nav--container" id="mobileMenu">
                     <ul>
+                        <li><a href="/index.html"><span><b>HI, I'M CAMI<i>LA</i></b></span></a></li>
+                        <li><a href="/index.html">home</a></li>
                         <li><a href="/about.html">about</a></li>
-                        <li><a href="/portfolio.html">portfolio</a></li>
                         <li><a href="/contact.html">contact</a></li>
                     </ul>
+                    <ul>
+                        <li><a href="/portfolio.html">development portfolio</a></li>
+                        <!-- <li><a href="https://codepen.io/collection/PYrOYe" target="_blank">resources for developers</a></li> -->
+                        <li style="display: none;"><a href="#">downloadable templates</a></li>
+                    </ul>
                 </div>
-                <hr>
+
+                <hr>                    
+
             </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                &#x2630;
+            </button>
             <div class="about">
                 <div class="about--container">
+                    <br>
+                    <img id="portrait" src="./img/portrait_styled.png">
+
+                    <p class="fade--up">
+                        <br><br>
+                        I have a lot of experience working with brands and businesses. I started out taking product and portrait photos in 2017, and soon transitioned into social media marketing and content creation.
+                        <br><br>
+                        At the end of 2019, I began taking courses at UCLA for backend code including C++ and Java. I realized that I could bring my interest in design and development together with frontend web development.
+                        <br><br>
+                        I graduated from UCLA in June 2021 and currently work as a frontend developer for the Neuroscience Education Institute along with freelance web development and graphic design.
+                    </p>
                     
-                    <div class="about-title fade--up-delay">
-                        <h1>Born and raised in Los Angeles, I've been working with brands in LA for over 5 years.</h1>
+                    <div class="me">
+                        <div><img id="me" src="./img/me.jpeg"></div>
+                        <img id="thisisme" src="./img/thisisme.png">
                     </div>
-
-                    <img id="about-hero" src="./img/me.jpeg">
-
-                    <div >
-                        <p id="about-blurb" class="fade--up">
-                            <br><br>
-                            I have a lot of experience working with brands and businesses. I started out taking product and portrait photos in 2017, and soon transitioned into social media marketing and content creation.
-                            <br><br>
-                            At the end of 2019, I began taking courses at UCLA for backend code including C++ and Java. I realized that I could bring my interest in design and development together with frontend web development.
-                            <br><br>
-                            I graduated from UCLA in June 2021 and currently work as a frontend developer for the Neuroscience Education Institute along with freelance web development and graphic design.
-                        </p>
-                    </div>
-
-
 
                 </div>
             </div>
-            <img class="fade--up" id="about-text" src="/img/about-text.png"><br><br>
 
-<!--             <div class="portrait">
+<!-- <div class="portrait">
                 <div class="portrait--container">
                     <img class="fade--up" src="./img/portrait.jpeg">
                     <p class="fade--up-delay"><i>likes:</i>
@@ -94,11 +100,6 @@
                         - not having enough pockets
                     </p>
                 </div>
-            </div>
-
-            <div class="letswork">
-                <h1>lets work together!</h1>
-                <img id="letswork-circle" src="/img/graphic-about-circle.png">
             </div> -->
 
             <div class="footer">
